@@ -18,9 +18,9 @@ const HomePage = () => {
            I have more than 3 and a half years of experience in Web Development.
           I love to work on web application using technologies like
           <span className='font-bold'> React JS</span>,
-          <span className='font-bold'>.NET</span>,
-          <span className='font-bold'>MS SQL Server</span> & 
-          <span className='font-bold'>MERN Stack</span>.
+          <span className='font-bold'> .NET</span>,
+          <span className='font-bold'> MS SQL Server</span> & 
+          <span className='font-bold'> MERN Stack</span>.
         </p>
         <div>
           <Link
