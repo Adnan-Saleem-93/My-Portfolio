@@ -31,15 +31,15 @@ const Navbar = () => {
 
   return (
     <div className='fixed w-full h-[80px] flex justify-center items-center px-4 bg-[#0a192f] text-gray-300'>
-      <ul className='hidden md:flex gap-x-8'>
+      <ul className='hidden md:flex gap-x-20'>
         {navItems.map((item,index):ReactNode=>{
             const {id,name} = item;
             return (
-                <li key={index}>
-                <Link to={id} smooth={true} duration={500}>
-                  {name}
-                </Link>
-              </li>
+                <li key={index} className='hover:text-white hover:font-semibold'>
+                    <Link to={id} smooth={true} duration={500}>
+                        {name}
+                    </Link>
+                </li>
             )
         })}
       </ul>
