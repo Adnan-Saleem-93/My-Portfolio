@@ -12,14 +12,17 @@ const About = () => {
         </div>
         <div className=" py-16 rounded-md  flex flex-col justify-center items-center w-4/6">
           <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
-            <div className="sm:text-right text-4xl font-bold">
+            <div className="sm:text-right text-slate-grey-600 text-4xl font-bold">
               <p>
-                Hi. I&apos;m Adnan Saleem, nice to meet you.
+                Hi.
+                I&apos;m <span className="text-white"> Adnan Saleem.</span>
+              </p>
+              <p>
+                Nice to meet you.
               </p>
             </div>
             <div>
-              <p>
-                
+              <p> 
                 A software developer with experience in building Responsive and
                 Scalable Web apps. I am well-experienced in Full-stack Web Development, 
                 capable of working on both Frontend and Backend Applications, as well as
