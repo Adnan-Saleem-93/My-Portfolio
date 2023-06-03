@@ -14,7 +14,7 @@ const HomePage = () => {
         <h2 className="text-4xl sm:text-6xl font-bold text-white">
           I&apos;m a Full Stack Web Developer
         </h2>
-        <p className="text-gray-500 py-4 max-w-md">
+        <p className="text-gray-400 py-4 max-w-md">
            I have more than 3 and a half years of experience in Web Development.
           Currently, I love to work on web application using technologies like
           React, .NET, MS SQL Server & MERN Stack.
@@ -24,7 +24,7 @@ const HomePage = () => {
             to="about"
             smooth
             duration={500}
-            className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
+            className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-600 to-blue-500 cursor-pointer"
           >
             About Me
             <span className="group-hover:rotate-90 duration-300">
@@ -37,8 +37,8 @@ const HomePage = () => {
         <Image
           src={me}  
           alt="my profile"
-          width="200"
-          height="200"
+          width="300"
+          height="300"
           className="rounded-full mx-auto md:w-full"
         />
       </div>
