@@ -14,10 +14,13 @@ const HomePage = () => {
         <h2 className="text-4xl sm:text-6xl font-bold text-white">
           I&apos;m a Full Stack Web Developer
         </h2>
-        <p className="text-gray-400 py-4 max-w-md">
+        <p className="text-gray-300 py-4 max-w-md">
            I have more than 3 and a half years of experience in Web Development.
-          Currently, I love to work on web application using technologies like
-          React, .NET, MS SQL Server & MERN Stack.
+          I love to work on web application using technologies like
+          <span className='font-bold'> React JS</span>,
+          <span className='font-bold'>.NET</span>,
+          <span className='font-bold'>MS SQL Server</span> & 
+          <span className='font-bold'>MERN Stack</span>.
         </p>
         <div>
           <Link
