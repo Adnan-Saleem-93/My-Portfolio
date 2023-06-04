@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import me from '../assets/IMG_2561~2.JPG'
+import me from '../assets/my-pic.jpg'
 import { Link } from 'react-scroll'
 import { HiArrowNarrowRight } from 'react-icons/hi';
 
