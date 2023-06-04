@@ -8,6 +8,7 @@ const skills: Skill[] = [
     {id:'html',name:'HTML'},
     {id:'css',name:'CSS'},
     {id:'javascript',name:'JavaScript'},
+    {id:'jQuery',name:'jQuery'},
     {id:'reactjs',name:'React JS'},
     {id:'nodejs',name:'Node JS'},
     {id:'expressjs',name:'Express JS'},
@@ -15,9 +16,12 @@ const skills: Skill[] = [
     {id:'c#',name:'C#'},
     {id:'asp.net',name:'ASP.NET MVC'},
     {id:'.net/core',name:'.NET Core'},
-    {id:'windowsservices',name:'Windows Services'},
-    {id:'mssqlserver',name:'MS SQL Server'},
+    {id:'windows_services',name:'Windows Services'},
+    {id:'ms_sql_server',name:'MS SQL Server'},
     {id:'typescript',name:'TypeScript'},
+    {id:'material_ui',name:'Material UI'},
+    {id:'bootstrap',name:'Bootstrap'},
+    {id:'tailwind_css',name:'Tailwind CSS'},
     {id:'restful_api',name:'RESTful APIs'},
 ]
 
@@ -32,7 +36,7 @@ const Skills = () => {
               <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
                 {skills.map((item): ReactNode =>{
                     return (
-                    <div key={item.id} className='bg-cyan-700 rounded-md hover:bg-cyan-600 hover:shadow-md hover:shadow-[#040c16] duration-500'>
+                    <div key={item.id} className='bg-cyan-700 rounded-md hover:bg-cyan-600 hover:shadow-md hover:shadow-[#040c16] hover:text-slate-950 hover:font-semibold duration-500'>
                         <p className='my-4'>{item.name}</p>
                     </div>
                     )
