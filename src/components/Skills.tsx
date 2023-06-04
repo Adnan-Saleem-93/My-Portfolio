@@ -13,8 +13,8 @@ const skills: Skill[] = [
     {id:'expressjs',name:'Express JS'},
     {id:'mongodb',name:'MongoDB'},
     {id:'c#',name:'C#'},
-    {id:'.net',name:'ASP.NET MVC'},
-    {id:'.net',name:'.NET Core'},
+    {id:'asp.net',name:'ASP.NET MVC'},
+    {id:'.net/core',name:'.NET Core'},
     {id:'windowsservices',name:'Windows Services'},
     {id:'mssqlserver',name:'MS SQL Server'},
     {id:'typescript',name:'TypeScript'},
@@ -32,7 +32,7 @@ const Skills = () => {
               <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
                 {skills.map((item): ReactNode =>{
                     return (
-                    <div key={item.id} className='shadow-md shadow-[#040c16] bg-cyan-700 rounded-md hover:scale-110 duration-500'>
+                    <div key={item.id} className='bg-cyan-700 rounded-md hover:bg-cyan-600 hover:shadow-md hover:shadow-[#040c16] duration-500'>
                         <p className='my-4'>{item.name}</p>
                     </div>
                     )
