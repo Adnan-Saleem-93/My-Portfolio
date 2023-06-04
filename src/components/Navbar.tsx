@@ -29,7 +29,7 @@ const Navbar = () => {
             {navItems.map((item,index):ReactNode=>{
                 const {id,name} = item;
                 return (
-                    <Link to={id} smooth={true} duration={500}  key={index} className='hover:text-white hover:font-semibold hover:cursor-pointer'>
+                    <Link to={id} smooth={true} spy={true} duration={500} key={index} className='hover:text-white hover:font-semibold hover:cursor-pointer'>
                         {name}
                     </Link>
                 )
