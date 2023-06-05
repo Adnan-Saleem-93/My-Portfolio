@@ -1,28 +1,32 @@
 import {ReactNode} from 'react'
+
+type Levels = "Beginner" | "Intermediate" | "Advanced" | "Expert"
 interface Skill{
     id: string;
     name:string;
+    level:Levels;
 }
 
 const skills: Skill[] = [
-    {id:'html',name:'HTML'},
-    {id:'css',name:'CSS'},
-    {id:'javascript',name:'JavaScript'},
-    {id:'jQuery',name:'jQuery'},
-    {id:'reactjs',name:'React JS'},
-    {id:'nodejs',name:'Node JS'},
-    {id:'expressjs',name:'Express JS'},
-    {id:'mongodb',name:'MongoDB'},
-    {id:'c#',name:'C#'},
-    {id:'asp.net',name:'ASP.NET MVC'},
-    {id:'.net/core',name:'.NET Core'},
-    {id:'windows_services',name:'Windows Services'},
-    {id:'ms_sql_server',name:'MS SQL Server'},
-    {id:'typescript',name:'TypeScript'},
-    {id:'material_ui',name:'Material UI'},
-    {id:'bootstrap',name:'Bootstrap'},
-    {id:'tailwind_css',name:'Tailwind CSS'},
-    {id:'restful_api',name:'RESTful APIs'},
+    {id:'html',name:'HTML',level:'Expert'},
+    {id:'css',name:'CSS',level:'Advanced'},
+    {id:'javascript',name:'JavaScript',level:'Expert'},
+    {id:'jQuery',name:'jQuery',level:"Advanced"},
+    {id:'reactjs',name:'React JS',level:"Expert"},
+    {id:'react_native',name:'React Native',level:"Beginner"},
+    {id:'nodejs',name:'Node JS',level:"Intermediate"},
+    {id:'expressjs',name:'Express JS',level:"Intermediate"},
+    {id:'mongodb',name:'MongoDB',level:"Intermediate"},
+    {id:'c#',name:'C#',level:"Intermediate"},
+    {id:'asp.net',name:'ASP.NET MVC',level:"Advanced"},
+    {id:'.net_core',name:'.NET Core',level:"Intermediate"},
+    {id:'windows_services',name:'Windows Services',level:"Advanced"},
+    {id:'ms_sql_server',name:'MS SQL Server',level:"Advanced"},
+    {id:'typescript',name:'TypeScript',level:"Intermediate"},
+    {id:'material_ui',name:'Material UI',level:"Advanced"},
+    {id:'bootstrap',name:'Bootstrap',level:"Expert"},
+    {id:'tailwind_css',name:'Tailwind CSS',level:"Intermediate"},
+    {id:'restful_api',name:'RESTful APIs',level:"Advanced"},
 ]
 
 const Skills = () => {

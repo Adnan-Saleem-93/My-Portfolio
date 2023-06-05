@@ -39,12 +39,12 @@ const About = () => {
                 }</span>
               })}
             </p>
-              <p> 
-                I have experience in building Responsive and
-                Scalable Web apps. I am well-experienced in Full-stack Web Development, 
-                capable of working on both Frontend and Backend Applications, as well as
-                Databases.
-              </p>
+            <p> 
+              I have experience in building Responsive and
+              Scalable Web apps. I am well-experienced in Full-stack Web Development, 
+              capable of working on both Frontend and Backend Applications, as well as
+              Databases.
+            </p>
             </div>
           </div>
         </div>
