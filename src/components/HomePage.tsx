@@ -2,6 +2,21 @@ import Image from 'next/image'
 import me from '../assets/my-pic.jpg'
 import { Link } from 'react-scroll'
 import { HiArrowNarrowRight } from 'react-icons/hi';
+import { ReactNode } from 'react';
+
+interface Technology{
+  id:string;
+  name: string;
+}
+
+const technologies: Technology[] = [
+  {id:'javascript',name:'JavaScript'},
+  {id:'reactjs',name:'React JS'},
+  {id:'mern',name:'MERN Stack'},
+  {id:'c#',name:'C#'},
+  {id:'.net',name:'.NET'},
+  {id:'ms_sql',name:'MS SQL Server'},
+]
 
 const HomePage = () => {
   return (
@@ -9,20 +24,17 @@ const HomePage = () => {
     id='home'
     className="h-screen w-full bg-cyan-950"
   >
-    <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
+    <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-6 md:flex-row">
       <div className="flex flex-col justify-center h-full">
-        <h2 className="text-4xl sm:text-6xl font-bold text-white">
+        <h2 className="text-3xl sm:text-5xl text-white">
+          Hi.
+        </h2>
+        <h2 className="text-3xl sm:text-5xl text-white">
+          I&apos;m <span className='font-bold'>Adnan Saleem</span>.
+        </h2>
+        <h2 className="my-4 text-4xl sm:text-4xl font-bold text-white">
           Full Stack Web Developer
         </h2>
-        <p className="text-gray-300 py-4 max-w-md">
-           I have more than 3 and a half years of experience in Web Development.
-          I love to work on web application using technologies like
-          <span className='font-bold text-white'> JavaScript</span>,
-          <span className='font-bold text-white'> React JS</span>,
-          <span className='font-bold text-white'> .NET</span>,
-          <span className='font-bold text-white'> MS SQL Server</span> & 
-          <span className='font-bold text-white'> MERN Stack</span>.
-        </p>
         <div>
           <Link
             to="about"
@@ -37,12 +49,12 @@ const HomePage = () => {
           </Link>
         </div>
       </div>
-      <div>
+      <div className='ml-4'>
         <Image
           src={me}  
           alt="my profile"
-          width="300"
-          height="300"
+          width="275"
+          height="275"
           className="rounded-full mx-auto md:w-full"
         />
       </div>
