@@ -29,15 +29,6 @@ const About = () => {
         </div>
         <div className=" py-16 rounded-md  flex flex-col justify-center items-center w-4/6">
           <div className="max-w-[800px] w-full grid gap-8 px-4">
-            {/* <div className="sm:text-right text-slate-grey-600 text-4xl font-bold">
-              <p>
-                Hi.
-                I&apos;m <span className="text-white"> Adnan Saleem.</span>
-              </p>
-              <p>
-                Nice to meet you.
-              </p>
-            </div> */}
             <div>
             <p className="text-gray-300 py-4">
               I have more than <span className='font-bold text-white'>3 & a half years of experience</span> in Web Development.
