@@ -1,15 +1,9 @@
 "use client";
 import { range } from '@/utils/helper-methods';
+import { ISkill } from '@/utils/interfaces';
 import {ReactNode} from 'react'
 
-
-interface Skill{
-    id: string;
-    name:string;
-    level:number;
-}
-
-const skills: Skill[] = [
+const skills: ISkill[] = [
     {id:'html',name:'HTML',level:4},
     {id:'css',name:'CSS',level:3},
     {id:'javascript',name:'JavaScript',level:4},

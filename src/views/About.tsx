@@ -1,11 +1,7 @@
+import { ITechnology } from '@/utils/interfaces';
 import { ReactNode } from 'react';
 
-interface Technology{
-  id:string;
-  name: string;
-}
-
-const technologies: Technology[] = [
+const technologies: ITechnology[] = [
   {id:'javascript',name:'JavaScript'},
   {id:'reactjs',name:'React JS'},
   {id:'mern',name:'MERN Stack'},
