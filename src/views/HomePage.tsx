@@ -5,20 +5,6 @@ import me from '../assets/my-pic.jpg'
 import { Link } from 'react-scroll'
 import { HiArrowNarrowRight } from 'react-icons/hi';
 
-interface Technology{
-  id:string;
-  name: string;
-}
-
-const technologies: Technology[] = [
-  {id:'javascript',name:'JavaScript'},
-  {id:'reactjs',name:'React JS'},
-  {id:'mern',name:'MERN Stack'},
-  {id:'c#',name:'C#'},
-  {id:'.net',name:'.NET'},
-  {id:'ms_sql',name:'MS SQL Server'},
-]
-
 const HomePage = () => {
   return (
     <div

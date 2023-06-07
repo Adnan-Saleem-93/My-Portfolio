@@ -6,13 +6,9 @@ import {
   } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 import { ReactNode, useState } from 'react';
+import { INavItem } from '@/utils/interfaces';
 
-interface NavItem{
-    id:string;
-    name:string;
-}
-
-const navItems:NavItem[]=[
+const navItems:INavItem[]=[
     {id:'home',name:'Home'},
     {id:'about',name:'About'},
     {id:'skills',name:'Skills'},

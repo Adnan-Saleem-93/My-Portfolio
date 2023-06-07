@@ -6,18 +6,10 @@ import {
   FaGithub,
   FaLinkedin,
 } from 'react-icons/fa';
-import { IconType } from 'react-icons/lib';
 import { ReactNode } from 'react';
+import { IConnectItem } from '@/utils/interfaces';
 
-interface ConnectItem{
-  id:string;
-  name:string;
-  icon:IconType;
-  href?:string;
-  background:string;
-}
-
-const contactItems:ConnectItem[]=[
+const contactItems:IConnectItem[]=[
   {id:'linkedin',name:'LinkedIn',icon:FaLinkedin,href:'https://www.linkedin.com/in/adnan-saleem-199151181',background:'bg-blue-600'},
   {id:'github',name:'Github',icon:FaGithub,href:'https://github.com/Adnan-Saleem-93',background:'bg-[#333333]'},
   {id:'email',name:'Email',icon:HiOutlineMail, href:"mailto:adnan13893@gmail.com",background:'bg-[#916654]'},
