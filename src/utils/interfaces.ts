@@ -3,7 +3,7 @@ import { IconType } from "react-icons/lib";
 export interface IProject{
     id:number;
     name:string;
-    url:string;
+    html_url:string;
     homepage:string;
 }
 
