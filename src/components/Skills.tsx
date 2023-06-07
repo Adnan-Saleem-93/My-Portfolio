@@ -1,35 +1,55 @@
+"use client";
+import { range } from '@/utils/helper-methods';
 import {ReactNode} from 'react'
 
-type Levels = "Beginner" | "Intermediate" | "Advanced" | "Expert"
+
 interface Skill{
     id: string;
     name:string;
-    level:Levels;
+    level:number;
 }
 
 const skills: Skill[] = [
-    {id:'html',name:'HTML',level:'Expert'},
-    {id:'css',name:'CSS',level:'Advanced'},
-    {id:'javascript',name:'JavaScript',level:'Expert'},
-    {id:'jQuery',name:'jQuery',level:"Advanced"},
-    {id:'reactjs',name:'React JS',level:"Expert"},
-    {id:'react_native',name:'React Native',level:"Beginner"},
-    {id:'nodejs',name:'Node JS',level:"Intermediate"},
-    {id:'expressjs',name:'Express JS',level:"Intermediate"},
-    {id:'mongodb',name:'MongoDB',level:"Intermediate"},
-    {id:'c#',name:'C#',level:"Intermediate"},
-    {id:'asp.net',name:'ASP.NET MVC',level:"Advanced"},
-    {id:'.net_core',name:'.NET Core',level:"Intermediate"},
-    {id:'windows_services',name:'Windows Services',level:"Advanced"},
-    {id:'ms_sql_server',name:'MS SQL Server',level:"Advanced"},
-    {id:'typescript',name:'TypeScript',level:"Intermediate"},
-    {id:'material_ui',name:'Material UI',level:"Advanced"},
-    {id:'bootstrap',name:'Bootstrap',level:"Expert"},
-    {id:'tailwind_css',name:'Tailwind CSS',level:"Intermediate"},
-    {id:'restful_api',name:'RESTful APIs',level:"Advanced"},
+    {id:'html',name:'HTML',level:4},
+    {id:'css',name:'CSS',level:3},
+    {id:'javascript',name:'JavaScript',level:4},
+    {id:'jQuery',name:'jQuery',level:4},
+    {id:'reactjs',name:'React JS',level:5},
+    {id:'react_native',name:'React Native',level:1},
+    {id:'nodejs',name:'Node JS',level:3},
+    {id:'expressjs',name:'Express JS',level:3},
+    {id:'mongodb',name:'MongoDB',level:3},
+    {id:'c#',name:'C#',level:4},
+    {id:'asp.net',name:'ASP.NET MVC',level:5},
+    {id:'.net_core',name:'.NET Core',level:3},
+    {id:'entity_framework',name:'Entity Framework',level:3},
+    {id:'windows_services',name:'Windows Services',level:4},
+    {id:'ms_sql_server',name:'MS SQL Server',level:4},
+    {id:'typescript',name:'TypeScript',level:2},
+    {id:'material_ui',name:'Material UI',level:4},
+    {id:'bootstrap',name:'Bootstrap',level:4},
+    {id:'tailwind_css',name:'Tailwind CSS',level:2},
+    {id:'restful_api',name:'RESTful APIs',level:3},
+    {id:'git',name:'Git',level:3},
 ]
 
 const Skills = () => {
+    const renderSkillLevel = (level:number) :ReactNode[] => {
+        return range(5).map((item) : ReactNode=>{
+             if(item < level){
+                 return (
+                     <span key={item} className={`h-[16px] w-[16px] bg-cyan-400 rounded-full mx-2`}>
+                     </span>
+                 )
+             } else{
+                 return (
+                     <span key={item} className={`h-[16px] w-[16px] bg-gray-900 rounded-full mx-2`}>
+                     </span>
+                 )
+             }
+         })
+     }
+
     return (
         <div id='skills' className='w-full h-screen bg-cyan-950 text-gray-300'>
           {/* Container */}
@@ -37,11 +57,13 @@ const Skills = () => {
               <div className=' w-full flex justify-center items-center flex-col mb-7'>
                   <p className='text-4xl font-bold inline border-b-4 border-cyan-500 text-center '>Skills</p>
               </div> 
-              <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
+              <div className='w-full grid grid-cols-2 sm:grid-cols-2 gap-x-8 text-center py-8'>
                 {skills.map((item): ReactNode =>{
+                    const {id,name,level} = item;
                     return (
-                    <div key={item.id} className='bg-cyan-700 rounded-md hover:bg-cyan-600 hover:shadow-md hover:shadow-[#040c16] hover:text-slate-950 hover:font-semibold duration-500'>
-                        <p className='my-4'>{item.name}</p>
+                    <div key={id} className='flex justify-between items-center p-4 hover:border-x-2 hover:border-slate-400 hover:border-solid hover:font-bold'>
+                        <p className='inline'>{name}</p>
+                        <div className='flex'>{renderSkillLevel(level)}</div>
                     </div>
                     )
                 })}
