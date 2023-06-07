@@ -15,6 +15,7 @@ const skills: Skill[] = [
     {id:'javascript',name:'JavaScript',level:4},
     {id:'jQuery',name:'jQuery',level:4},
     {id:'reactjs',name:'React JS',level:5},
+    {id:'nextjs',name:'Next JS',level:1},
     {id:'react_native',name:'React Native',level:1},
     {id:'nodejs',name:'Node JS',level:3},
     {id:'expressjs',name:'Express JS',level:3},

@@ -1,9 +1,9 @@
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import HomePage from "@/components/HomePage";
-import Navbar from "@/components/Navbar";
-import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
+import About from "@/views/About";
+import Contact from "@/views/Contact";
+import HomePage from "@/views/HomePage";
+import Navbar from "@/views/Navbar";
+import Projects from "@/views/Projects";
+import Skills from "@/views/Skills";
 
 export default function Home() {
   return (
