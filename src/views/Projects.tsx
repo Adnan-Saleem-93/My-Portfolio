@@ -1,14 +1,27 @@
 import { range } from "@/utils/helper-methods";
-import {ReactNode} from 'react'
+import {ReactNode, useState, useEffect} from 'react'
 import ProjectSkeleton from '../components/project-skeleton'
 import { getRepos } from "@/utils/apis";
 import { IProject } from "@/utils/interfaces";
 import Project from "@/components/project";
 
-const Projects = async () => {
-  const repos: IProject[] | null = await getRepos()
+const Projects = () => {
+  const [projects, setProjects] = useState<IProject[]>([])
+  const getReposHandler = async () => { 
+    const reposList: IProject[] | [] = await getRepos()
+    setProjects(reposList.filter(x=>x.homepage))
+  }
+  useEffect(() => {
+    getReposHandler()
+  
+    return () => {
+      setProjects([])
+    }
+  }, [])
+  
   
   return (
+    <>
       <div id='projects' className='w-full md:h-screen text-gray-300 bg-cyan-950'>
         <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
           <div className='pb-8 w-full flex justify-center items-center flex-col'>
@@ -18,12 +31,10 @@ const Projects = async () => {
             <p className='py-6 text-2xl'>Check out some of my most recent work</p>
           </div>
           {/* Container */}
-          <div className='flex flex justify-center items-center w-full h-[55%] overflow-x-auto gap-x-12 gap-y-4'>
+          <div className='flex p-4 items-center w-full h-[55%] overflow-x-auto'>
             {/* Grid Item */}
-            {repos?.length? repos.map((item:IProject):ReactNode=>{
-              if(item.homepage){
+            {projects?.length? projects.map((item:IProject):ReactNode=>{
                 return <Project key={item.id} {...item}/>
-              }
             }): range(6).map((item:number):ReactNode=>{
               return (
                 <ProjectSkeleton key={item}/>
@@ -32,6 +43,7 @@ const Projects = async () => {
           </div>
         </div>
       </div>
+    </>
     );
 }
 
