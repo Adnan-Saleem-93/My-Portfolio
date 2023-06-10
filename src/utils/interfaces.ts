@@ -12,12 +12,13 @@ export interface ITechnology{
     name: string;
 }
   
-export interface IConnectItem{
+export interface IContactItem{
     id:string;
     name:string;
     icon:IconType;
     href?:string;
     background:string;
+    hoverBackground:string;
 }
 
 export interface INavItem{
