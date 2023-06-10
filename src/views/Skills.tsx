@@ -33,12 +33,12 @@ const Skills = () => {
         return range(5).map((item) : ReactNode=>{
              if(item < level){
                  return (
-                     <span key={item} className={`h-[16px] w-[16px] bg-cyan-400 rounded-full mx-2`}>
+                     <span key={item} className={`group-hover:bg-blue-600 h-[16px] w-[16px] bg-cyan-500 rounded-full mx-2`}>
                      </span>
                  )
              } else{
                  return (
-                     <span key={item} className={`h-[16px] w-[16px] bg-gray-900 rounded-full mx-2`}>
+                     <span key={item} className={`group-hover:bg-black h-[16px] w-[16px] bg-gray-900 rounded-full mx-2`}>
                      </span>
                  )
              }
@@ -56,7 +56,7 @@ const Skills = () => {
                 {skills.map((item): ReactNode =>{
                     const {id,name,level} = item;
                     return (
-                    <div key={id} className='flex justify-between items-center p-4 hover:border-x-2 hover:border-slate-400 hover:border-solid hover:font-bold'>
+                    <div key={id} className='group flex justify-between items-center p-4 hover:font-bold'>
                         <p className='inline'>{name}</p>
                         <div className='flex'>{renderSkillLevel(level)}</div>
                     </div>
