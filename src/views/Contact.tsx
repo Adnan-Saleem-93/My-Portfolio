@@ -12,7 +12,7 @@ import { IContactItem } from '@/utils/interfaces';
 const contactItems:IContactItem[]=[
   {id:'linkedin',name:'LinkedIn', icon:FaLinkedin, href:'https://www.linkedin.com/in/adnan-saleem-199151181',background:'bg-[#0C64C5]', hoverBackground:'hover:bg-[#0956ab]'},
   {id:'github',name:'Github', icon:FaGithub, href:'https://github.com/Adnan-Saleem-93',background:'bg-[#333333]', hoverBackground:'hover:bg-[#212121]'},
-  {id:'email',name:'Email', icon:HiOutlineMail, href:"mailto:adnan13893@gmail.com",background:'bg-[#cc0e2e]', hoverBackground:'hover:bg-[#b50d29]'},
+  {id:'email',name:'Email', icon:HiOutlineMail, href:"mailto:adnan13893@gmail.com",background:'bg-fuchsia-900', hoverBackground:'hover:bg-fuchsia-950'},
   {id:'resume',name:'Resume', icon:BsFillPersonLinesFill, href:'https://firebasestorage.googleapis.com/v0/b/portfolio-d37f4.appspot.com/o/Adnan%20Saleem%20Resume.pdf?alt=media&token=48dba14a-6087-4c0a-92e5-d630f9a9b768', background:'bg-[#074369]', hoverBackground:'hover:bg-[#063654]'},
 ]
 

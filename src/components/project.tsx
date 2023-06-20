@@ -18,7 +18,7 @@ import to_do_list from '../assets/images/to-do-list.jpeg'
 import sidebar from '../assets/images/sidebar.jpg'
 import no_thumbnail from '../assets/images/no-thumbnail.jpg'
 
-const images = {
+const images : Array<StaticImageData> = [
     birthday_reminder,
     cart,
     color_generator,
@@ -31,11 +31,11 @@ const images = {
     tours,
     to_do_list,
     sidebar
-}
+]
 
 const Project = ({name,html_url,homepage}:IProject) => {
-    const imgVar:string = name.toLowerCase().replaceAll("-","_")
-    const imgSrc:StaticImageData= images[imgVar] || no_thumbnail
+    const imgVar:string = name.toLowerCase()
+    const imgSrc:StaticImageData= images.find(x=>x.src.includes(imgVar)) || no_thumbnail
   return (
     <div className='m-2 h-[18rem] bg-cyan-900 shadow-lg shadow-[#040c16] rounded-md flex justify-center items-center'>
         <div className='flex justify-evenly items-center flex-col w-[300px] h-full group'>
