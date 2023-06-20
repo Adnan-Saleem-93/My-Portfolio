@@ -1,6 +1,6 @@
 const ProjectSkeleton = () => {
   return (
-    <div className='w-[20rem] h-[17.5rem] bg-cyan-900 shadow-lg shadow-[#040c16] group rounded-md flex justify-center items-center mx-auto'>
+    <div className='m-2 w-[20rem] h-[18rem] bg-cyan-900 shadow-lg shadow-[#040c16] group rounded-md flex justify-center items-center '>
         <div className='animate-pulse flex justify-center items-center flex-col'>
           <div className='w-[75%] h-[24px] rounded-md my-4 bg-slate-800 text-lg font-bold text-white'>
           </div>

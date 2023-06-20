@@ -33,7 +33,7 @@ const Projects = () => {
           {/* Container */}
           <div className='flex p-4 items-center w-full h-[55%] overflow-x-auto'>
             {/* Grid Item */}
-            {projects?.length? projects.map((item:IProject):ReactNode=>{
+            {projects?.length ? projects.map((item:IProject):ReactNode=>{
                 return <Project key={item.id} {...item}/>
             }): range(6).map((item:number):ReactNode=>{
               return (
