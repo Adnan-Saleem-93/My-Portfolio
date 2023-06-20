@@ -16,6 +16,7 @@ import slider from '../assets/images/slider.jpeg'
 import tours from '../assets/images/tours.jpeg'
 import to_do_list from '../assets/images/to-do-list.jpeg'
 import sidebar from '../assets/images/sidebar.jpg'
+import socio from '../assets/images/socio.jpeg'
 import no_thumbnail from '../assets/images/no-thumbnail.jpg'
 
 const images : Array<StaticImageData> = [
@@ -30,7 +31,8 @@ const images : Array<StaticImageData> = [
     slider,
     tours,
     to_do_list,
-    sidebar
+    sidebar,
+    socio
 ]
 
 const Project = ({name,html_url,homepage}:IProject) => {
