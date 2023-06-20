@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image'
-import me from '../assets/my-pic.jpg'
+import me from '../assets/images/my-pic.jpg'
 import { Link } from 'react-scroll'
 import { HiArrowNarrowRight } from 'react-icons/hi';
 
