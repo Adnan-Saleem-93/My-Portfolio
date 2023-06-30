@@ -18,7 +18,7 @@ import to_do_list from '../assets/images/to-do-list.jpeg'
 import sidebar from '../assets/images/sidebar.jpg'
 import socio from '../assets/images/socio.jpeg'
 import no_thumbnail from '../assets/images/no-thumbnail.jpg'
-import payment_form from '../assets/images/payment-form.jpg'
+import payment_form from '../assets/images/payment-form.jpeg'
 
 const images : Array<StaticImageData> = [
     birthday_reminder,
