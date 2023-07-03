@@ -46,13 +46,13 @@ const Project = ({name,html_url,homepage}:IProject) => {
                 {name.replaceAll("-"," ")}
             </span>
             <div className='text-center flex w-full hidden group-hover:flex'>
-                <a href={html_url} target="_blank" className="flex hover:bg-fuchsia-700 justify-center items-center min-w-[120px] w-[50%] px-4 py-4 bg-sky-700">
+                <a href={html_url} target="_blank" className="flex hover:bg-gray-900/50 justify-center items-center min-w-[120px] w-[50%] px-4 py-4 bg-sky-700">
                     <span className='flex justify-center items-center text-center text-white font-bold text-md w-full'>
                         Code
                         <GoLinkExternal className="ml-1" size={20}/>
                     </span>
                 </a>
-                <a href={homepage} target="_blank" className="flex hover:bg-fuchsia-900 justify-center items-center min-w-[120px] w-[50%] px-4 py-4 bg-blue-900">
+                <a href={homepage} target="_blank" className="flex hover:bg-gray-900/50 justify-center items-center min-w-[120px] w-[50%] px-4 py-4 bg-blue-900">
                     <span className='flex justify-center items-center text-center text-white font-bold text-md'>
                         Preview
                         <GoLinkExternal className="ml-1" size={20}/>
