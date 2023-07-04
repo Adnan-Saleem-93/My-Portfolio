@@ -18,7 +18,6 @@ export interface IContactItem{
     icon:IconType;
     href?:string;
     background:string;
-    hoverBackground:string;
 }
 
 export interface INavItem{
