@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <div
     id='home'
-    className="h-screen w-full bg-cyan-950"
+    className="h-screen w-full"
   >
     <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-6 md:flex-row">
       <div className="flex flex-col justify-center h-full">

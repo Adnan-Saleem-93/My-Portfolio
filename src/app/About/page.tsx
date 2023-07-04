@@ -1,3 +1,5 @@
+"use client";
+
 import { ITechnology } from '@/utils/interfaces';
 import { ReactNode } from 'react';
 
@@ -15,7 +17,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-full h-screen bg-cyan-950 text-gray-300"
+      className="w-full h-screen text-gray-300"
     >
       <div className="flex flex-col justify-center items-center w-full h-full">
         <div className="sm:text-right">
