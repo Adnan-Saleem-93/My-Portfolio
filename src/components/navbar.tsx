@@ -4,7 +4,7 @@ import {
     FaBars,
     FaTimes
   } from 'react-icons/fa';
-import { Link } from 'react-scroll';
+import  Link  from 'next/link';
 import { ReactNode, useState } from 'react';
 import { INavItem } from '@/utils/interfaces';
 
@@ -26,7 +26,7 @@ const Navbar = () => {
             {navItems.map((item,index):ReactNode=>{
                 const {id,name} = item;
                 return (
-                    <Link to={id} smooth={true} spy={true} duration={500} key={index} className='hover:text-white hover:font-semibold hover:cursor-pointer'>
+                    <Link key={id} href={`${id}`} className='hover:text-white hover:font-semibold hover:cursor-pointer'>
                         {name}
                     </Link>
                 )
@@ -48,7 +48,7 @@ const Navbar = () => {
                 const {id,name} = item;
                 return (
                     <li className='py-6 text-4xl' key={index}>
-                        <Link onClick={handleClick} to={id} smooth={true} duration={500}>
+                        <Link onClick={handleClick} href={`${id}`}>
                             {name}
                         </Link>
                     </li>
