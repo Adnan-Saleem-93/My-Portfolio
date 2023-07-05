@@ -20,6 +20,11 @@ export interface IContactItem{
     background:string;
 }
 
+export interface ILinkItem{
+    name:string;
+    href:string;
+}
+
 export interface INavItem{
     id:string;
     name:string;

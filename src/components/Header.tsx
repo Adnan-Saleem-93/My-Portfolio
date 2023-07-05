@@ -7,7 +7,7 @@ type Props = {};
 
 const Header = (props: Props) => {
 	return (
-		<header className="w-full flex justify-between md:justify-around items-center sticky top-0">
+		<header className="w-full flex justify-between md:justify-around items-center sticky top-0 p-5">
 			<motion.div
 				initial={{ x: -500, scale: 0.5, opacity: 0 }}
 				animate={{ x: 0, scale: 1, opacity: 1 }}
@@ -42,12 +42,10 @@ const Header = (props: Props) => {
 				initial={{ x: 500, scale: 0.5, opacity: 0 }}
 				animate={{ x: 0, scale: 1, opacity: 1 }}
 				transition={{ duration: 1.25 }}
-				className="cursor-pointer flex items-center group"
+				className="cursor-pointer flex items-center"
 			>
 				<SocialIcon network="email" fgColor="gray" bgColor="transparent" />
-				<p className="text-gray-400 opacity-0 group-hover:opacity-100 duration-500">
-					Get In Touch!
-				</p>
+				<p className="text-gray-400 md:inline-flex hidden">Get In Touch!</p>
 			</motion.div>
 		</header>
 	);
