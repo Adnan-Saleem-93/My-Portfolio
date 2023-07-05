@@ -10,10 +10,10 @@ import { ReactNode } from 'react';
 import { IContactItem } from '@/utils/interfaces';
 
 const contactItems:IContactItem[]=[
-  {id:'linkedin',name:'LinkedIn', icon:FaLinkedin, href:'https://www.linkedin.com/in/adnan-saleem-199151181',background:'bg-[#0C64C5]', hoverBackground:'hover:bg-[#0956ab]'},
-  {id:'github',name:'Github', icon:FaGithub, href:'https://github.com/Adnan-Saleem-93',background:'bg-[#333333]', hoverBackground:'hover:bg-[#212121]'},
-  {id:'email',name:'Email', icon:HiOutlineMail, href:"mailto:adnan13893@gmail.com",background:'bg-fuchsia-900', hoverBackground:'hover:bg-fuchsia-950'},
-  {id:'resume',name:'Resume', icon:BsFillPersonLinesFill, href:'https://firebasestorage.googleapis.com/v0/b/portfolio-d37f4.appspot.com/o/Adnan%20Saleem%20Resume.pdf?alt=media&token=48dba14a-6087-4c0a-92e5-d630f9a9b768', background:'bg-[#074369]', hoverBackground:'hover:bg-[#063654]'},
+  {id:'linkedin',name:'LinkedIn', icon:FaLinkedin, href:'https://www.linkedin.com/in/adnan-saleem-199151181',background:'bg-[#0C64C5]'},
+  {id:'github',name:'Github', icon:FaGithub, href:'https://github.com/Adnan-Saleem-93',background:'bg-[#333333]'},
+  {id:'email',name:'Email', icon:HiOutlineMail, href:"mailto:adnan13893@gmail.com",background:'bg-fuchsia-900'},
+  {id:'resume',name:'Resume', icon:BsFillPersonLinesFill, href:'https://firebasestorage.googleapis.com/v0/b/portfolio-d37f4.appspot.com/o/Adnan%20Saleem%20Resume.pdf?alt=media&token=48dba14a-6087-4c0a-92e5-d630f9a9b768', background:'bg-[#074369]'},
 ]
 
 const Contact = () => {
@@ -27,9 +27,9 @@ const Contact = () => {
         <div>
             <ul className='grid grid-cols-2 gap-4'>
               {contactItems.map((contact):ReactNode=>{
-                const {id,name,href,icon:Icon,background,hoverBackground} = contact;
+                const {id,name,href,icon:Icon,background} = contact;
                 return (
-                  <li key={id} className={`w-[200px] h-[200px] flex justify-between border-2 border-slate-500 border-solid items-center mx-4 rounded-md duration-300 ${background} hover:scale-110 ${hoverBackground}`}>
+                  <li key={id} className={`w-[200px] h-[200px] flex justify-between border-2 border-slate-500 border-solid items-center mx-4 rounded-md duration-300 ${background} hover:scale-110`}>
                       <a
                       className='flex flex-col justify-evenly h-full items-center w-full text-gray-300'
                       href={href}
