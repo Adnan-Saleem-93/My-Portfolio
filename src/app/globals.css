@@ -41,6 +41,9 @@
 		@apply px-4;
 		@apply cursor-pointer;
 	}
+	.link_button {
+		@apply py-2 px-6 uppercase transition-all text-gray-400 text-xs border border-[#24242400] hover:text-[#b88e33] hover:border-[#b88e33] rounded-full tracking-wider;
+	}
 }
 .content-div {
 	background-repeat: no-repeat;
