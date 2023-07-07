@@ -11,20 +11,18 @@ export default function Home() {
 		<main className="h-screen snap-y snap-mandatory overflow-scroll z-0">
 			<Header />
 
-			{/* Main */}
 			<Main />
 
-			{/* About */}
 			<About />
 
 			{/* Experience */}
 			<Experience />
 
-			{/* Projects */}
-			<Projects />
-
 			{/* Skills */}
 			<Skills />
+
+			{/* Projects */}
+			<Projects />
 
 			{/* Contact */}
 			<Contact />
