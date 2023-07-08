@@ -1,5 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
+import ExperienceCard from "./ExperienceCard";
+import ImmentiaLogo from "../../public/images/immentia-logo.png";
+import IntelligenesLogo from "../../public/images/intelligenes-logo.png";
 
 type Props = {};
 
@@ -15,6 +18,19 @@ const Experience = (props: Props) => {
 				<h3 className="absolute top-24 text-2xl uppercase tracking-[12px] text-gray-400/80">
 					Experience
 				</h3>
+
+				<div className="flex justify-start items-center w-full">
+					<ExperienceCard
+						imgSrc={IntelligenesLogo}
+						alt="intelligenes"
+						name="Intelligenes"
+					/>
+					<ExperienceCard
+						imgSrc={ImmentiaLogo}
+						alt="immentia"
+						name="Immentia"
+					/>
+				</div>
 			</motion.div>
 		</section>
 	);
