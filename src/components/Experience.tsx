@@ -24,11 +24,20 @@ const Experience = (props: Props) => {
 						imgSrc={IntelligenesLogo}
 						alt="intelligenes"
 						name="Intelligenes"
+						period="Apr 04, 2022 - Present"
+						details={[
+							"Joined as Frontend (ReactJS) Developer",
+							"Currently working on a large-scale project (Rungjumper) for a client in the US",
+							"Served as Team Lead for RungJumper project and also developed most of the frontend for it",
+							"Supervised junior React developers on other projects as well.",
+						]}
 					/>
 					<ExperienceCard
 						imgSrc={ImmentiaLogo}
 						alt="immentia"
 						name="Immentia"
+						period="Nov 26, 2019 - Mar 26, 2022"
+						details={["Joined as ASP.NET intern."]}
 					/>
 				</div>
 			</motion.div>
