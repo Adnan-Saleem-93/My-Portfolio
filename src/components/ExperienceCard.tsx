@@ -11,7 +11,7 @@ type Props = {
 
 const ExperienceCard = ({ imgSrc, alt, name, period, details }: Props) => {
 	return (
-		<div className="m-4 flex flex-col justify-center items-center min-w-1/2 w-1/2 border border-gray-500 p-6 rounded-lg">
+		<div className="m-4 flex flex-col justify-center items-center min-w-1/2 w-1/2 border border-gray-500 p-6 rounded-lg bg-slate-700">
 			<Image
 				src={imgSrc}
 				alt={alt}
@@ -21,13 +21,15 @@ const ExperienceCard = ({ imgSrc, alt, name, period, details }: Props) => {
 				{name}
 			</h3>
 			<p className="text-gray-400 text-sm mb-1">{period}</p>
-			{details.map((detail: string, index: number): ReactNode => {
-				return (
-					<p key={index} className="text-gray-400 text-sm">
-						{detail}
-					</p>
-				);
-			})}
+			<ul className="list-disc max-w-sm">
+				{details.map((detail: string, index: number): ReactNode => {
+					return (
+						<li key={index} className="text-gray-400 text-sm">
+							{detail}
+						</li>
+					);
+				})}
+			</ul>
 		</div>
 	);
 };
