@@ -2,8 +2,9 @@
 
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
+import { ReactNode } from "react";
 
-const Header = () => {
+const Header = (): ReactNode => {
 	return (
 		<header className="w-full flex justify-between md:justify-around items-center sticky top-0 p-5">
 			<motion.div
