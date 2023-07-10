@@ -13,18 +13,18 @@ const Experience = (props: Props) => {
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 1.5 }}
-				className="h-screen flex flex-col md:flex-row relative text-center md:text-left mx-auto max-w-7xl px-10 justify-evenly items-center"
+				className="h-screen flex flex-col lg:flex-row relative text-center md:text-left mx-auto max-w-7xl px-10 justify-evenly items-center"
 			>
 				<h3 className="absolute top-24 text-2xl uppercase tracking-[12px] text-gray-400/80">
 					Experience
 				</h3>
 
-				<div className="flex justify-start items-center w-full mt-24">
+				<div className="flex justify-start items-center w-full mt-44">
 					<ExperienceCard
 						imgSrc={IntelligenesLogo}
 						alt="intelligenes"
 						position="React JS Developer (Team Lead)"
-						name="Intelligenes"
+						name="Intelligenes - Global Software Delivery"
 						period="Apr 04, 2022 - Present"
 						details={[
 							"Joined as Frontend (ReactJS) Developer.",
@@ -32,15 +32,15 @@ const Experience = (props: Props) => {
 							"Served as Team Lead for RungJumper project and also developed most of the frontend for it.",
 							"Supervised junior React developers on other projects as well.",
 							"Converted Figma Design to React Components.",
-							"Worked with Material UI theming and customized it to customer's satisfaction.",
-							"Worked with Azure DevOps for CI/CD and agile methodlogies.",
+							"Customized Material UI theming to customer's satisfaction.",
+							"Used CI/CD and Agile Methodlogies in Azure DevOps.",
 						]}
 						webLink="https://www.intelligenes.com/"
 					/>
 					<ExperienceCard
 						imgSrc={ImmentiaLogo}
 						alt="immentia"
-						name="Immentia"
+						name="Immentia SMC Pvt. Ltd."
 						position="Senior Team Lead"
 						period="Nov 26, 2019 - Mar 26, 2022"
 						details={[

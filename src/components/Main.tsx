@@ -10,8 +10,7 @@ import Image from "next/image";
 import profilePic from "../../public/images/my-pic.jpg";
 import Link from "next/link";
 import { ILinkItem } from "@/utils/interfaces";
-
-type Props = {};
+import { ReactNode } from "react";
 
 const links: ILinkItem[] = [
 	{ name: "About", href: "#about" },
@@ -20,7 +19,7 @@ const links: ILinkItem[] = [
 	{ name: "Skills", href: "#skills" },
 ];
 
-const Main = (props: Props) => {
+const Main = (): ReactNode => {
 	const [text, count]: [text: string, count: TypewriterHelper] = useTypewriter({
 		words: [
 			"Hi, I'm Adnan Saleem!",

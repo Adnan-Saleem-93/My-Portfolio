@@ -1,9 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
+import { ReactNode } from "react";
 
 type Props = {};
 
-const Projects = (props: Props) => {
+const Projects = (props: Props): ReactNode => {
 	return (
 		<section id="#projects" className="snap-center">
 			<motion.div
