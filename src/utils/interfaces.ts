@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import { IconType } from "react-icons/lib";
 
 export interface IProject{
@@ -8,8 +9,9 @@ export interface IProject{
 }
 
 export interface ITechnology{
-    id:string;
+    id?:string;
     name: string;
+    img:StaticImageData;
 }
   
 export interface IContactItem{

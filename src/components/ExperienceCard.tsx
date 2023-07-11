@@ -1,3 +1,4 @@
+import { ITechnology } from "@/utils/interfaces";
 import Image, { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 
@@ -8,7 +9,7 @@ type Props = {
 	position: string;
 	period: string;
 	details: string[];
-	technologies?: StaticImageData[];
+	technologies?: ITechnology[];
 	webLink?: string;
 };
 
@@ -20,6 +21,7 @@ const ExperienceCard = ({
 	period,
 	details,
 	webLink,
+	technologies,
 }: Props) => {
 	return (
 		<a
@@ -40,6 +42,14 @@ const ExperienceCard = ({
 					{name}
 				</h3>
 				<p className="text-gray-400 text-sm mb-1">{period}</p>
+				<div className="flex justify-start items-center">
+					{technologies?.map(
+						(technology: ITechnology, index: number): ReactNode => {
+							const { name, img } = technology;
+							return <Image key={index} src={img} alt={name} />;
+						}
+					)}
+				</div>
 				<ul className="list-disc max-w-md">
 					{details.map((detail: string, index: number): ReactNode => {
 						return (
