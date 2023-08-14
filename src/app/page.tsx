@@ -15,16 +15,12 @@ export default function Home() {
 
 			<About />
 
-			{/* Experience */}
 			<Experience />
 
-			{/* Skills */}
 			<Skills />
 
-			{/* Projects */}
 			<Projects />
 
-			{/* Contact */}
 			<Contact />
 		</main>
 	);
