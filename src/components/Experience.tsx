@@ -25,7 +25,7 @@ const Experience = (props: Props) => {
 						alt="intelligenes"
 						position="React JS Developer (Team Lead)"
 						name="Intelligenes - Global Software Delivery"
-						period="Apr 04, 2022 - Present"
+						period="Apr 04, 2022 - Aug 18, 2023"
 						details={[
 							"Joined as Frontend (ReactJS) Developer.",
 							"Currently working on a large-scale project (Rungjumper) for a client in the US.",
@@ -48,7 +48,7 @@ const Experience = (props: Props) => {
 							"Worked with multiple technologies and frameworks including ASP.NET/Core, MERN Stack, MS SQL Server.",
 							"Supervised a small team of interns and junior developers for 9 months.",
 							"Worked in close collaboration with the CEO of the company to optimize and add features to the major projects.",
-							"Worked on major projects of the company, frequently adding new features and optimizing the existing ones as such Academic Solutions, Sales Management, FikiFoo, Design Solutions.",
+							"Worked on major projects of the company, frequently adding new features and optimizing the existing ones such as Academic Solutions, Sales Management, FikiFoo, Design Solutions.",
 						]}
 						webLink="https://immentia.com/"
 					/>
