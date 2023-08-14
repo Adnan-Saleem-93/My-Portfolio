@@ -19,7 +19,7 @@ const links: ILinkItem[] = [
 	{ name: "Skills", href: "#skills" },
 ];
 
-const Main = (): ReactNode => {
+const Main = () => {
 	const [text, count]: [text: string, count: TypewriterHelper] = useTypewriter({
 		words: [
 			"Adnan Saleem!",
