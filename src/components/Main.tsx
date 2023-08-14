@@ -22,9 +22,11 @@ const links: ILinkItem[] = [
 const Main = (): ReactNode => {
 	const [text, count]: [text: string, count: TypewriterHelper] = useTypewriter({
 		words: [
-			"Hi, I'm Adnan Saleem!",
-			"Software Engineer",
-			"<b>Loves to Code</b>",
+			"Adnan Saleem!",
+			"a Software Engineer",
+			"a ReactJS Developer",
+			"a ASP.NET Developer",
+			"a MERN Developer",
 		],
 		loop: true,
 		delaySpeed: 3000,
@@ -46,14 +48,14 @@ const Main = (): ReactNode => {
 						Full Stack Web Developer
 					</h1>
 					<h1 className="text-5xl py-2">
-						<span>{text}</span>
+						I'm <span className="text-green-400">{text}</span>
 						<Cursor cursorColor="#ffff00" />
 					</h1>
 					<div className="flex justify-center items-center pb-2">
 						{links.map((link: ILinkItem, index: number) => {
 							return (
 								<Link href={link.href} key={index}>
-									<button className="link_button">{link.name}</button>
+									<button className="link--button">{link.name}</button>
 								</Link>
 							);
 						})}
