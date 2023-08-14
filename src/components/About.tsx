@@ -26,11 +26,11 @@ const About = () => {
 					<Image
 						src={myPic2}
 						alt="about-section-pic"
-						className="-mb-32 md:mb-0 flex-shrink-0 w-56 h-48 md:w-80 md:h-96 object-cover xl:w-[400px] xl:h-[425px] py-2 md:px-6 rounded-full lg:rounded-[2rem]"
+						className="-mb-32 md:mb-0 flex-shrink-0 w-48 h-48 md:w-80 md:h-96 object-cover xl:w-[400px] xl:h-[425px] py-2 md:px-6 rounded-full lg:rounded-[2rem]"
 					/>
 				</motion.div>
-				<div className="space-y-10 px-0 md:px-10 max-w-[60%]">
-					<p className="md:text-base inline md:tracking-widest md:leading-8 text-sm">
+				<div className="space-y-10 px-0 md:px-10 md:max-w-[60%]">
+					<p className="md:text-base inline md:tracking-widest md:leading-8 text-md xl:text-lg">
 						I&apos;m a Full Stack Web Developer having more than 3 & a half
 						years of industry experience in Web Development. I love to work on
 						web applications using technologies like JavaScript, React JS, MERN
