@@ -27,14 +27,14 @@ const ExperienceCard = ({
 		<a
 			href={webLink}
 			target="_blank"
-			className="relative m-4 flex flex-col justify-center items-center min-w-1/2 min-h-1/2 max-h-[30rem] min-h-[30rem] h-[30rem] w-1/2 p-6 rounded-lg bg-gray-800 hover:bg-gray-900"
+			className="m-4 flex flex-col justify-start items-center min-w-1/2 min-h-[30rem] h-[40rem] max-h-[40rem] overflow-auto w-1/2 p-6 rounded-2xl bg-gray-800 hover:bg-gray-900"
 		>
 			<Image
 				src={imgSrc}
 				alt={alt}
-				className="absolute -top-16 rounded-full w-32 h-32 object-cover mb-4"
+				className="rounded-full w-32 h-32 object-cover mb-4"
 			/>
-			<div className="absolute flex flex-col justify-center items-start ">
+			<div className="flex flex-col justify-center items-start ">
 				<h3 className="text-bold text-3xl text-gray-300 tracking-wide mb-1">
 					{position}
 				</h3>
