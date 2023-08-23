@@ -3,61 +3,64 @@
 @tailwind utilities;
 
 :root {
-	--primary: #0c4257;
-	--secondary: cornflowerblue;
+  --primary: #0c4257;
+  --secondary: cornflowerblue;
 }
 
 /* Firefox */
 * {
-	scrollbar-width: thin;
-	scrollbar-color: var(--secondary) var(--primary);
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-	width: 15px;
+  width: 15px;
 }
 
 *::-webkit-scrollbar-track {
-	background: var(--primary);
-	/* border-radius: 5px; */
+  background: var(--primary);
+  /* border-radius: 5px; */
 }
 
 *::-webkit-scrollbar-thumb {
-	background-color: var(--secondary);
-	border-radius: 14px;
-	border: 3px solid var(--primary);
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 3px solid var(--primary);
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
 @layer base {
-	body {
-		@apply font-Raleway bg-cyan-950 text-white;
-	}
-	* {
-		@apply box-border;
-	}
-	li {
-		@apply px-4;
-		@apply cursor-pointer;
-	}
-	.link--button {
-		@apply py-2 px-6 uppercase transition-all text-gray-400 text-xs border border-[#24242400] hover:text-[#b88e33] hover:border-[#b88e33] rounded-full tracking-wider;
-	}
-	.flex--centered--row {
-		@apply flex flex-row justify-center items-center;
-	}
+  body {
+    @apply font-Raleway bg-cyan-950 text-white;
+  }
+  * {
+    @apply box-border;
+  }
+  li {
+    @apply px-4;
+    @apply cursor-pointer;
+  }
+  .link--button {
+    @apply py-2 px-6 uppercase transition-all text-gray-400 text-xs border border-[#24242400] hover:text-[#b88e33] hover:border-[#b88e33] rounded-full tracking-wider;
+  }
+  .flex--centered--row {
+    @apply flex flex-row justify-center items-center;
+  }
+  .skill--image {
+    @apply lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-24 sm:h-24 w-20 h-20;
+  }
 }
 .content-div {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
 }
 .content-div:hover {
-	background-image: linear-gradient(
-		to right,
-		rgba(112, 157, 255, 0.8),
-		hsla(242, 74%, 61%, 0.8)
-	) !important;
+  background-image: linear-gradient(
+    to right,
+    rgba(112, 157, 255, 0.8),
+    hsla(242, 74%, 61%, 0.8)
+  ) !important;
 }
