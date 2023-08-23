@@ -28,7 +28,7 @@ const Skills = () => {
         <h3 className="absolute top-24 text-2xl uppercase tracking-[12px] text-gray-400/80">
           Skill
         </h3>
-        <h3 className="absolute top-36 text-sm capitalize tracking-[3px] text-gray-400/80">
+        <h3 className="absolute top-36 text-[11px] capitalize tracking-[3px] text-gray-400/80">
           Hover over a skill for skill proficiency
         </h3>
         <div className="grid grid-cols-4 gap-5 relative top-8">
