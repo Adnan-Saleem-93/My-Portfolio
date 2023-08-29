@@ -58,4 +58,7 @@
   .full--wh {
     @apply w-full h-full;
   }
+  .project--card--btn {
+    @apply border border-gray-300 text-gray-300 rounded-full p-2 min-w-[5rem] hover:bg-slate-600 hover:text-white hover:border-slate-600;
+  }
 }
