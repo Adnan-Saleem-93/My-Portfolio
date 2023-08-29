@@ -49,4 +49,13 @@
   .skill--image {
     @apply lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-24 sm:h-24 w-20 h-20;
   }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  .rotate-y-0 {
+    transform: rotateY(0);
+  }
+  .full--wh {
+    @apply w-full h-full;
+  }
 }
