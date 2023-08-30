@@ -8,7 +8,10 @@ import Skills from '@/components/Skill-Section'
 
 export default function Home() {
   return (
-    <main className="h-screen snap-y snap-mandatory overflow-scroll z-0">
+    <main
+      className="h-screen snap-y snap-mandatory overflow-scroll z-0"
+      style={{backgroundImage: 'url(/images/Hexagon.svg)'}}
+    >
       <Header />
 
       <Main />

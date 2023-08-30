@@ -11,7 +11,7 @@ type Props = {
 
 export default function Project({title, description = '', imgSrc, link, repo}: Props) {
   return (
-    <div className="relative min-w-[20rem] h-[25rem] min-h-[25rem] mb-6 group">
+    <div className="relative min-w-[25rem] h-[25rem] min-h-[25rem] mb-6 group">
       <div className="absolute top-0 left-0 full--wh group-hover:opacity-0 group-hover:rotate-y-180">
         <Image src={imgSrc} alt={title} className="full--wh rounded-md" />
       </div>
