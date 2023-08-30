@@ -1,5 +1,7 @@
 import Image, {StaticImageData} from 'next/image'
 import React from 'react'
+import ProjectActionButton from '../atoms/Project-Action-Button'
+import ProjectActions from './Project-Actions'
 
 type Props = {
   title: string
@@ -20,14 +22,12 @@ export default function Project({title, description = '', imgSrc, link, repo}: P
           <h3 className="text-2xl text-slate-50 tracking-[4px] mb-5">{title}</h3>
           <p className="text-sm text-slate-300">{description}</p>
         </div>
-        <div className="flex justify-evenly items-center">
-          <a className="project--card--btn" href={link}>
-            Demo
-          </a>
-          <a className="project--card--btn" href={repo}>
-            Code
-          </a>
-        </div>
+        <ProjectActions
+          items={[
+            {href: link, name: 'Demo'},
+            {href: repo, name: 'Code'}
+          ]}
+        />
       </div>
     </div>
   )
