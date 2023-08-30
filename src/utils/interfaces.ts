@@ -1,5 +1,4 @@
 import {StaticImageData} from 'next/image'
-import {IconType} from 'react-icons/lib'
 
 export interface IGithubRepo {
   id: number
@@ -14,28 +13,9 @@ export interface ITechnology {
   img: StaticImageData
 }
 
-export interface IContactItem {
-  id: string
-  name: string
-  icon: IconType
-  href?: string
-  background: string
-}
-
 export interface ILinkItem {
   name: string
-  href: string
-}
-
-export interface INavItem {
-  id: string
-  name: string
-}
-
-export interface ISkill {
-  id: string
-  name: string
-  level: number
+  href?: string
 }
 
 export interface IAnimatedIconLabel {
