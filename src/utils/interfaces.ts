@@ -37,3 +37,8 @@ export interface ISkill {
   name: string
   level: number
 }
+
+export interface IAnimatedIconLabel {
+  icon: any
+  label: string
+}

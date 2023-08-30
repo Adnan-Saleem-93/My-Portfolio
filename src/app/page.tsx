@@ -1,30 +1,39 @@
-import About from '@/components/About'
-import Contact from '@/components/Contact'
-import Experience from '@/components/Experience-Section'
-import Header from '@/components/Header'
-import Main from '@/components/Main'
-import Projects from '@/components/Project-Section'
-import Skills from '@/components/Skill-Section'
+import About from '@/components/pages/About-Section'
+import Contact from '@/components/pages/Contact-Section'
+import Experience from '@/components/pages/Experience-Section'
+import Header from '@/components/organisms/Header'
+import Main from '@/components/pages/Hero-Section'
+import Projects from '@/components/pages/Project-Section'
+import Skills from '@/components/pages/Skill-Section'
 
 export default function Home() {
   return (
-    <main
-      className="h-screen snap-y snap-mandatory overflow-scroll z-0"
-      style={{backgroundImage: 'url(/images/Hexagon.svg)'}}
-    >
+    <main className="h-screen snap-y snap-mandatory overflow-scroll z-0">
       <Header />
 
-      <Main />
+      <section id="main" className="snap-start">
+        <Main />
+      </section>
 
-      <About />
+      <section id="about" className="snap-center">
+        <About />
+      </section>
 
-      <Experience />
+      <section id="experience" className="snap-center">
+        <Experience />
+      </section>
 
-      <Skills />
+      <section id="skills" className="snap-center">
+        <Skills />
+      </section>
 
-      <Projects />
+      <section id="projects" className="snap-center">
+        <Projects />
+      </section>
 
-      <Contact />
+      <section id="contact" className="snap-end">
+        <Contact />
+      </section>
     </main>
   )
 }
