@@ -6,6 +6,7 @@ import {HiLocationMarker, HiAtSymbol, HiOutlineDeviceMobile} from 'react-icons/h
 import {AiOutlineWhatsApp, AiTwotoneMail} from 'react-icons/ai'
 import {SiGmail} from 'react-icons/si'
 import SectionTemplate from '../templates/Section-Template'
+import Form from '../organisms/Form'
 
 const contactItems: IAnimatedIconLabel[] = [
   {icon: SiGmail, label: 'adnan13893@gmail.com'},
@@ -17,7 +18,7 @@ const contactItems: IAnimatedIconLabel[] = [
 const Contact = () => {
   return (
     <SectionTemplate
-      classes="h-screen flex flex-col md:flex-row relative text-center md:text-left mx-auto max-w-7xl px-10 justify-evenly items-center"
+      classes="h-screen flex flex-col relative text-center md:text-left mx-auto max-w-7xl px-10 justify-evenly items-center"
       sectionHeaderText="Contact"
     >
       <div className="w-full relative top-8 grid grid-cols-2 justify-center items-center space-x-2">
@@ -25,6 +26,9 @@ const Contact = () => {
           const {icon, label} = item
           return <AnimatedIconWithLabel key={index} icon={icon} label={label} index={index} />
         })}
+      </div>
+      <div className="w-full flex items-center justify-center">
+        <Form />
       </div>
     </SectionTemplate>
   )
