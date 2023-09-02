@@ -6,7 +6,7 @@ type Props = {
   id: string
   name: string
   error: boolean
-  errorMessage: boolean
+  errorMessage: string
   onChange: any
   placeholder: string
   customClasses?: string

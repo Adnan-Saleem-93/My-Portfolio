@@ -3,10 +3,16 @@ import React from 'react'
 import {useForm, SubmitHandler, Controller} from 'react-hook-form'
 import Input from '../atoms/Input'
 import Button from '../atoms/Button'
+import {IFormItem} from '@/utils/interfaces'
 
 type Inputs = {
-  example: string
-  exampleRequired: string
+  name: string
+  label?: string
+  placeholder: string
+  errorMessage: string
+  type: string
+  invalidMessage?: string
+  rowWidth: number
 }
 
 type Props = {defaultValues?: any; validations?: any; form?: any; onSubmit?: any}
@@ -17,28 +23,27 @@ export default function Form({defaultValues, validations, form, onSubmit}: Props
     control,
     formState: {errors}
   } = useForm<Inputs>({defaultValues, reValidateMode: 'onSubmit'})
+
   const render = () => {
-    return form.map((formItem, index) => {
-      const {name, value, error, type, placeholder} = formItem
+    return form.map((formItem: IFormItem, index: number) => {
+      const {name, type, errorMessage, placeholder} = formItem
       return (
         <div key={index}>
           <Controller
             control={control}
-            defaultValue={value}
-            name={name}
+            // defaultValue={value}
+            // name={name}
             render={({field}) => {
-              return (
-                type === 'text' && (
-                  <Input
-                    type={type}
-                    id={name}
-                    placeholder={placeholder}
-                    error={error}
-                    errorMessage={error}
-                    {...field}
-                  />
-                )
-              )
+              return type === 'text' ? (
+                <Input
+                  type={type}
+                  id={name}
+                  placeholder={placeholder}
+                  error={false}
+                  errorMessage={errorMessage}
+                  {...field}
+                />
+              ) : null
             }}
           />
         </div>
