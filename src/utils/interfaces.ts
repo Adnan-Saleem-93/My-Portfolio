@@ -22,3 +22,13 @@ export interface IAnimatedIconLabel {
   icon: any
   label: string
 }
+
+export interface IFormItem {
+  name: string
+  label?: string
+  placeholder: string
+  errorMessage: string
+  type: string
+  invalidMessage?: string
+  rowWidth: number
+}
