@@ -1,4 +1,5 @@
 import {StaticImageData} from 'next/image'
+import {FormErrorType, InputTypeValues} from './types'
 
 export interface IGithubRepo {
   id: number
@@ -28,7 +29,17 @@ export interface IFormItem {
   label?: string
   placeholder: string
   errorMessage?: string
-  type: string
+  type: InputTypeValues
   invalidMessage?: string
+  rowWidth: number
+}
+
+export interface IFormArrayItem {
+  name: string
+  label?: string
+  placeholder: string
+  error: FormErrorType
+  value: any
+  type: InputTypeValues
   rowWidth: number
 }
