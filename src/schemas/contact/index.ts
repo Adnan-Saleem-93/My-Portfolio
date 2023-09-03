@@ -5,33 +5,33 @@ export const contactForm = {
     name: 'first_name',
     label: 'First Name',
     type: 'text',
-    placeholder: 'Enter First Name Here',
+    placeholder: 'First Name',
     errorMessage: 'First Name is required.',
-    rowWidth: 6
+    rowWidth: 1 // grid column span
   },
   last_name: {
     name: 'last_name',
     label: 'Last Name',
     type: 'text',
-    placeholder: 'Enter Last Name Here',
-    rowWidth: 6
+    placeholder: 'Last Name',
+    rowWidth: 1
   },
   email: {
     name: 'email',
     label: 'Email Address',
     type: 'text',
-    placeholder: 'Enter Email Address Here',
+    placeholder: 'Email Address',
     errorMessage: 'Email Address is required.',
     invalidMessage: 'Please enter a valid Email Address',
-    rowWidth: 12
+    rowWidth: 2
   },
   message: {
     name: 'message',
     label: 'Message',
-    type: 'text',
-    placeholder: 'Enter Message Here',
+    type: 'textarea',
+    placeholder: 'Message',
     errorMessage: 'Message is required.',
-    rowWidth: 12
+    rowWidth: 2
   }
 }
 
