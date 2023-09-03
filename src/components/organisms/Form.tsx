@@ -4,25 +4,23 @@ import {useForm, SubmitHandler, Controller} from 'react-hook-form'
 import Input from '../atoms/Input'
 import Button from '../atoms/Button'
 import {IFormItem} from '@/utils/interfaces'
-
-type Inputs = {
-  name: string
-  label?: string
-  placeholder: string
-  errorMessage: string
-  type: string
-  invalidMessage?: string
-  rowWidth: number
-}
+import {yupResolver} from '@hookform/resolvers/yup'
+import * as yup from 'yup'
 
 type Props = {defaultValues?: any; validations?: any; form?: any; onSubmit?: any}
 
 export default function Form({defaultValues, validations, form, onSubmit}: Props) {
+  type InputType = typeof validations
+
   const {
     handleSubmit,
     control,
     formState: {errors}
-  } = useForm<Inputs>({defaultValues, reValidateMode: 'onSubmit'})
+  } = useForm<yup.InferType<typeof validations>>({
+    defaultValues,
+    resolver: yupResolver(validations),
+    reValidateMode: 'onSubmit'
+  })
 
   const render = () => {
     return form.map((formItem: IFormItem, index: number) => {

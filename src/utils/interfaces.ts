@@ -27,7 +27,7 @@ export interface IFormItem {
   name: string
   label?: string
   placeholder: string
-  errorMessage: string
+  errorMessage?: string
   type: string
   invalidMessage?: string
   rowWidth: number

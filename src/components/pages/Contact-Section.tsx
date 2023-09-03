@@ -1,5 +1,4 @@
 'use client'
-import {motion} from 'framer-motion'
 import AnimatedIconWithLabel from '../molecules/Animated-Icon-With-Label'
 import {IAnimatedIconLabel} from '@/utils/interfaces'
 import {HiLocationMarker, HiAtSymbol, HiOutlineDeviceMobile} from 'react-icons/hi'
@@ -7,6 +6,8 @@ import {AiOutlineWhatsApp, AiTwotoneMail} from 'react-icons/ai'
 import {SiGmail} from 'react-icons/si'
 import SectionTemplate from '../templates/Section-Template'
 import Form from '../organisms/Form'
+
+import {contactForm, contactDefaultValues, contactValidations} from '@/schemas/contact'
 
 const contactItems: IAnimatedIconLabel[] = [
   {icon: SiGmail, label: 'adnan13893@gmail.com'},
@@ -16,6 +17,9 @@ const contactItems: IAnimatedIconLabel[] = [
 ]
 
 const Contact = () => {
+  const onSubmit = (data: typeof contactValidations) => {
+    console.log(data)
+  }
   return (
     <SectionTemplate
       classes="h-screen flex flex-col relative text-center md:text-left mx-auto max-w-7xl px-10 justify-evenly items-center"
@@ -28,7 +32,11 @@ const Contact = () => {
         })}
       </div>
       <div className="w-full flex items-center justify-center">
-        <Form />
+        <Form
+          defaultValues={contactDefaultValues}
+          form={contactForm}
+          validations={contactValidations}
+        />
       </div>
     </SectionTemplate>
   )
