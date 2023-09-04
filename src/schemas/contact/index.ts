@@ -2,20 +2,13 @@ import {IContactForm} from '@/utils/interfaces'
 import * as yup from 'yup'
 
 export const contactForm: IContactForm = {
-  first_name: {
-    name: 'first_name',
-    label: 'First Name',
+  name: {
+    name: 'name',
+    label: 'Name',
     type: 'text',
-    placeholder: 'First Name',
-    errorMessage: 'First Name is required.',
-    colSpan: 'col-span-1' // grid column span
-  },
-  last_name: {
-    name: 'last_name',
-    label: 'Last Name',
-    type: 'text',
-    placeholder: 'Last Name',
-    colSpan: 'col-span-1'
+    placeholder: 'Name',
+    errorMessage: 'Name is required.',
+    rowWidth: 'col-span-1' // grid column span
   },
   email: {
     name: 'email',
@@ -24,7 +17,15 @@ export const contactForm: IContactForm = {
     placeholder: 'Email Address',
     errorMessage: 'Email Address is required.',
     invalidMessage: 'Please enter a valid Email Address',
-    colSpan: 'col-span-2'
+    rowWidth: 'col-span-1'
+  },
+  subject: {
+    name: 'subject',
+    label: 'Subject',
+    type: 'text',
+    placeholder: 'Subject',
+    errorMessage: 'Subject is required.',
+    rowWidth: 'col-span-2'
   },
   message: {
     name: 'message',
@@ -32,23 +33,23 @@ export const contactForm: IContactForm = {
     type: 'textarea',
     placeholder: 'Message',
     errorMessage: 'Message is required.',
-    colSpan: 'col-span-2'
+    rowWidth: 'col-span-2'
   }
 }
 
-const {first_name, last_name, email, message} = contactForm
+const {name, subject, email, message} = contactForm
 
 export const contactDefaultValues = {
-  [first_name.name]: '',
-  [last_name.name]: '',
+  [name.name]: '',
+  [subject.name]: '',
   [email.name]: '',
   [message.name]: ''
 }
 
 export const contactValidations = yup
   .object({
-    [first_name.name]: yup.string().required(first_name.errorMessage),
-    [last_name.name]: yup.string(),
+    [name.name]: yup.string().required(name.errorMessage),
+    [subject.name]: yup.string().required(subject.errorMessage),
     [email.name]: yup.string().required(email.errorMessage).email(email.invalidMessage),
     [message.name]: yup.string().required(message.errorMessage)
   })

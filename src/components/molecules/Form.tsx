@@ -1,6 +1,6 @@
 'use client'
-import React from 'react'
-import {useForm, SubmitHandler, Controller} from 'react-hook-form'
+import React, {useCallback} from 'react'
+import {useForm, Controller} from 'react-hook-form'
 import Input from '../atoms/Input'
 import PrimaryButton from '../atoms/Button'
 import {IFormArrayItem, IFormItem} from '@/utils/interfaces'
@@ -24,20 +24,20 @@ export default function Form({defaultValues, validations, form, onSubmit}: Props
     reValidateMode: 'onChange'
   })
 
-  const renderFields = () => {
+  const renderFields = useCallback(() => {
     let inputFields: IFormArrayItem[] = []
 
     for (let item in form) {
-      let {name, type, placeholder, label, colSpan}: IFormItem = form[item]
+      let {name, type, placeholder, label, rowWidth}: IFormItem = form[item]
       let error = errors[name]
       let value = defaultValues[name]
 
-      inputFields.push({name, type, placeholder, label, error, value, colSpan})
+      inputFields.push({name, type, placeholder, label, error, value, rowWidth})
     }
     return inputFields.map((formItem: IFormArrayItem, index: number) => {
-      const {name, type, error, value, placeholder, colSpan} = formItem
+      const {name, type, error, value, placeholder, rowWidth} = formItem
       return (
-        <div key={index} className={`${colSpan}`}>
+        <div key={index} className={`${rowWidth ? rowWidth : ''} col-span-1 relative`}>
           <Controller
             control={control}
             defaultValue={value}
@@ -66,13 +66,14 @@ export default function Form({defaultValues, validations, form, onSubmit}: Props
               )
             }}
           />
-          {/* {error && (
+          {error && (
             <MdInfo className={`h-6 w-6 text-yellow-200 absolute right-1 top-2 animate-pulse`} />
-          )} */}
+          )}
         </div>
       )
     })
-  }
+  }, [form, defaultValues, errors, control])
+
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col items-center justify-center">
       <div className="w-full grid grid-cols-2 gap-2 xs:grid-cols-1">{renderFields()}</div>

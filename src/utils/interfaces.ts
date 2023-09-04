@@ -31,7 +31,7 @@ export interface IFormItem {
   errorMessage?: string
   type: InputTypeValues
   invalidMessage?: string
-  colSpan: string
+  rowWidth?: string
 }
 
 export interface IFormArrayItem {
@@ -41,12 +41,12 @@ export interface IFormArrayItem {
   error: FormErrorType
   value: any
   type: InputTypeValues
-  colSpan: string
+  rowWidth?: string
 }
 
 export interface IContactForm {
-  first_name: IFormItem
-  last_name: IFormItem
+  name: IFormItem
   email: IFormItem
+  subject: IFormItem
   message: IFormItem
 }
