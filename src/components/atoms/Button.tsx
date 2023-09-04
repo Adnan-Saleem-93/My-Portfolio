@@ -15,7 +15,7 @@ export default function PrimaryButton({
 }: Props) {
   return (
     <button
-      className={`${customClasses} p-2 bg-sky-700 rounded-md hover:bg-sky-800 tracking-[8px] hover:tracking-[11px] uppercase`}
+      className={`${customClasses} p-2 bg-sky-700 rounded-md hover:bg-sky-800 tracking-[8px] hover:tracking-[10px] uppercase`}
       onClick={onClick}
       type={type}
     >
