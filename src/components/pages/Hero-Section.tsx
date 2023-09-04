@@ -16,7 +16,7 @@ const links: ILinkItem[] = [
 const Main = () => {
   return (
     <GenericTemplate classes="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
-      {/* <BackgroundCircles /> */}
+      <BackgroundCircles />
       <Image
         src={profilePic}
         alt="profile-avatar"

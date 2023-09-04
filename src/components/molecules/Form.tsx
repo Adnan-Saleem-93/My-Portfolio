@@ -28,16 +28,16 @@ export default function Form({defaultValues, validations, form, onSubmit}: Props
     let inputFields: IFormArrayItem[] = []
 
     for (let item in form) {
-      let {name, type, placeholder, label, rowWidth}: IFormItem = form[item]
+      let {name, type, placeholder, label, colSpan}: IFormItem = form[item]
       let error = errors[name]
       let value = defaultValues[name]
 
-      inputFields.push({name, type, placeholder, label, error, value, rowWidth})
+      inputFields.push({name, type, placeholder, label, error, value, colSpan})
     }
     return inputFields.map((formItem: IFormArrayItem, index: number) => {
-      const {name, type, error, value, placeholder, rowWidth} = formItem
+      const {name, type, error, value, placeholder, colSpan} = formItem
       return (
-        <div key={index} className={`col-span-${rowWidth} relative`}>
+        <div key={index} className={`${colSpan}`}>
           <Controller
             control={control}
             defaultValue={value}
@@ -66,16 +66,16 @@ export default function Form({defaultValues, validations, form, onSubmit}: Props
               )
             }}
           />
-          {error && (
+          {/* {error && (
             <MdInfo className={`h-6 w-6 text-yellow-200 absolute right-1 top-2 animate-pulse`} />
-          )}
+          )} */}
         </div>
       )
     })
   }
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col items-center justify-center">
-      <div className="w-full grid grid-cols-2 gap-1 xs:grid-cols-1">{renderFields()}</div>
+      <div className="w-full grid grid-cols-2 gap-2 xs:grid-cols-1">{renderFields()}</div>
       <PrimaryButton text="Submit" type="submit" customClasses="w-full" />
     </form>
   )

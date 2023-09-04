@@ -7,3 +7,15 @@ export type FormErrorType =
   | undefined
 
 export type InputTypeValues = 'text' | 'textarea' | 'number'
+
+export type InputFieldProps = {
+  value: string
+  type: string
+  id: string
+  name: string
+  error: boolean
+  errorMessage: FormErrorType
+  onChange: any
+  placeholder: string
+  customClasses?: string
+}

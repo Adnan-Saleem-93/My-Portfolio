@@ -14,7 +14,11 @@ export default function PrimaryButton({
   onClick = null
 }: Props) {
   return (
-    <button className={`${customClasses} p-2 bg-sky-600 rounded-md`} onClick={onClick} type={type}>
+    <button
+      className={`${customClasses} p-2 bg-sky-700 rounded-md hover:bg-sky-800 tracking-[8px] hover:tracking-[11px] uppercase`}
+      onClick={onClick}
+      type={type}
+    >
       {text}
     </button>
   )
