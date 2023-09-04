@@ -1,20 +1,21 @@
+import {IContactForm} from '@/utils/interfaces'
 import * as yup from 'yup'
 
-export const contactForm = {
+export const contactForm: IContactForm = {
   first_name: {
     name: 'first_name',
     label: 'First Name',
     type: 'text',
     placeholder: 'First Name',
     errorMessage: 'First Name is required.',
-    rowWidth: 1 // grid column span
+    colSpan: 'col-span-1' // grid column span
   },
   last_name: {
     name: 'last_name',
     label: 'Last Name',
     type: 'text',
     placeholder: 'Last Name',
-    rowWidth: 1
+    colSpan: 'col-span-1'
   },
   email: {
     name: 'email',
@@ -23,7 +24,7 @@ export const contactForm = {
     placeholder: 'Email Address',
     errorMessage: 'Email Address is required.',
     invalidMessage: 'Please enter a valid Email Address',
-    rowWidth: 2
+    colSpan: 'col-span-2'
   },
   message: {
     name: 'message',
@@ -31,7 +32,7 @@ export const contactForm = {
     type: 'textarea',
     placeholder: 'Message',
     errorMessage: 'Message is required.',
-    rowWidth: 2
+    colSpan: 'col-span-2'
   }
 }
 

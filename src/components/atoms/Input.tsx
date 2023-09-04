@@ -1,23 +1,6 @@
-import {FormErrorType} from '@/utils/types'
+import {InputFieldProps} from '@/utils/types'
 import React from 'react'
 
-type Props = {
-  value: string
-  type: string
-  id: string
-  name: string
-  error: boolean
-  errorMessage: FormErrorType
-  onChange: any
-  placeholder: string
-  customClasses?: string
-}
-
-export default function Input(props: Props) {
-  return (
-    <input
-      {...props}
-      className={`bg-slate-600 w-full rounded-md focus:outline-none p-2 ${props.customClasses}`}
-    />
-  )
+export default function Input(props: InputFieldProps) {
+  return <input {...props} className={`input--field ${props.customClasses}`} />
 }
