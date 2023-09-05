@@ -29,7 +29,7 @@ export default function Form({defaultValues, validations, form, onSubmit}: Props
 
     for (let item in form) {
       let {name, type, placeholder, label, rowWidth}: IFormItem = form[item]
-      let error = errors[name]
+      let error = errors[name]?.message || null
       let value = defaultValues[name]
 
       inputFields.push({name, type, placeholder, label, error, value, rowWidth})
@@ -66,9 +66,7 @@ export default function Form({defaultValues, validations, form, onSubmit}: Props
               )
             }}
           />
-          {error && (
-            <MdInfo className={`h-6 w-6 text-yellow-200 absolute right-1 top-2 animate-pulse`} />
-          )}
+          {error && <span className={`text-yellow-200 animate-pulse`}>{error}</span>}
         </div>
       )
     })

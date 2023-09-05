@@ -1,10 +1,6 @@
 import {FieldError, FieldErrorsImpl, Merge} from 'react-hook-form/dist/types'
 
-export type FormErrorType =
-  | string
-  | FieldError
-  | Merge<FieldError, FieldErrorsImpl<any>>
-  | undefined
+export type FormErrorType = FieldError | Merge<FieldError, FieldErrorsImpl<any>> | undefined | null
 
 export type InputTypeValues = 'text' | 'textarea' | 'number'
 
@@ -14,7 +10,7 @@ export type InputFieldProps = {
   id: string
   name: string
   error: boolean
-  errorMessage: FormErrorType
+  errorMessage: string
   onChange: any
   placeholder: string
   customClasses?: string
