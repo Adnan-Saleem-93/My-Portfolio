@@ -38,7 +38,7 @@ export interface IFormArrayItem {
   name: string
   label?: string
   placeholder: string
-  error: FormErrorType
+  error: string | null
   value: any
   type: InputTypeValues
   rowWidth?: string
