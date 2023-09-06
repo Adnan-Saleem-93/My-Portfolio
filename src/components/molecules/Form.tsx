@@ -1,5 +1,5 @@
 'use client'
-import React, {ReactElement, ReactNode, forwardRef, useCallback} from 'react'
+import React, {ReactElement, useCallback} from 'react'
 import {useForm, Controller} from 'react-hook-form'
 import Input from '../atoms/Input'
 import PrimaryButton from '../atoms/Button'
@@ -8,14 +8,10 @@ import {yupResolver} from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import {InputTypes} from '@/utils/constants'
 import TextArea from '../atoms/TextArea'
-import {JsxElement} from 'typescript'
 
 type Props = {defaultValues: any; validations: any; form: any; onSubmit: any}
 
-const Form = forwardRef<HTMLFormElement, Props>(function Form(
-  {defaultValues, validations, form, onSubmit},
-  ref
-): ReactElement {
+const Form = ({defaultValues, validations, form, onSubmit}: Props): ReactElement => {
   const {
     handleSubmit,
     control,
@@ -78,7 +74,6 @@ const Form = forwardRef<HTMLFormElement, Props>(function Form(
 
   return (
     <form
-      ref={ref}
       id="form"
       onSubmit={handleSubmit(onSubmit)}
       className="flex flex-col items-center justify-center"
@@ -87,6 +82,6 @@ const Form = forwardRef<HTMLFormElement, Props>(function Form(
       <PrimaryButton text="Submit" type="submit" customClasses="w-full" />
     </form>
   )
-})
+}
 
 export default Form
