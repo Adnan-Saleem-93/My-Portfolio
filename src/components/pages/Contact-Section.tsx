@@ -7,9 +7,11 @@ import {SiGmail} from 'react-icons/si'
 import SectionTemplate from '../templates/Section-Template'
 import Form from '../molecules/Form'
 import * as yup from 'yup'
+import emailjs from '@emailjs/browser'
 
 import {contactForm, contactDefaultValues, contactValidations} from '../../schemas/contact'
 import {SubmitHandler} from 'react-hook-form'
+import {useRef} from 'react'
 
 const contactItems: IAnimatedIconLabel[] = [
   {icon: SiGmail, label: 'adnan13893@gmail.com'},
@@ -21,15 +23,25 @@ const contactItems: IAnimatedIconLabel[] = [
 type InputType = yup.InferType<typeof contactValidations>
 
 const Contact = () => {
-  const onSubmit: SubmitHandler<InputType> = (data) => {
-    console.log(data)
+  const onSubmit: SubmitHandler<InputType> = async (data) => {
+    try {
+      const response = await emailjs.sendForm(
+        'YOUR_SERVICE_ID',
+        'YOUR_TEMPLATE_ID',
+        formRef.current,
+        'YOUR_PUBLIC_KEY'
+      )
+      console.log(response)
+    } catch (error: any) {
+      console.log(error)
+    }
   }
   return (
     <SectionTemplate
       classes="h-screen flex flex-col relative text-center md:text-left mx-auto max-w-7xl px-10 justify-evenly items-center"
       sectionHeaderText="Contact"
     >
-      <div className="w-full relative top-12 grid grid-cols-2 justify-center items-center space-x-8">
+      <div className="w-full relative top-16 grid grid-cols-2 justify-center items-center space-x-8">
         {contactItems.map((item, index) => {
           const {icon, label} = item
           return <AnimatedIconWithLabel key={index} icon={icon} label={label} index={index} />

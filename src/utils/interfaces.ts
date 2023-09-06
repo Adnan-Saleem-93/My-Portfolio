@@ -31,7 +31,6 @@ export interface IFormItem {
   errorMessage?: string
   type: InputTypeValues
   invalidMessage?: string
-  rowWidth?: string
 }
 
 export interface IFormArrayItem {
