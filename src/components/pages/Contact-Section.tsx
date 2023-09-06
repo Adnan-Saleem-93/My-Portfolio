@@ -11,7 +11,7 @@ import emailjs from '@emailjs/browser'
 
 import {contactForm, contactDefaultValues, contactValidations} from '../../schemas/contact'
 import {SubmitHandler} from 'react-hook-form'
-import {useRef} from 'react'
+import {useLayoutEffect, useRef} from 'react'
 
 const contactItems: IAnimatedIconLabel[] = [
   {icon: SiGmail, label: 'adnan13893@gmail.com'},
@@ -23,12 +23,14 @@ const contactItems: IAnimatedIconLabel[] = [
 type InputType = yup.InferType<typeof contactValidations>
 
 const Contact = () => {
+  const formRef = useRef<HTMLFormElement>(null)
+
   const onSubmit: SubmitHandler<InputType> = async (data) => {
     try {
       const response = await emailjs.sendForm(
         'YOUR_SERVICE_ID',
         'YOUR_TEMPLATE_ID',
-        formRef.current,
+        formRef?.current,
         'YOUR_PUBLIC_KEY'
       )
       console.log(response)
@@ -53,6 +55,7 @@ const Contact = () => {
           form={contactForm}
           validations={contactValidations}
           onSubmit={onSubmit}
+          ref={formRef}
         />
       </div>
     </SectionTemplate>
