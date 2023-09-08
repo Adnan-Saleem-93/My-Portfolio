@@ -8,7 +8,6 @@ import SectionTemplate from '../templates/Section-Template'
 import Form from '../molecules/Form'
 import * as yup from 'yup'
 import emailjs from '@emailjs/browser'
-
 import {contactForm, contactDefaultValues, contactValidations} from '../../schemas/contact'
 import {SubmitHandler} from 'react-hook-form'
 
@@ -23,7 +22,6 @@ type InputType = yup.InferType<typeof contactValidations>
 
 const Contact = () => {
   const onSubmit: SubmitHandler<InputType> = async (data, event) => {
-    console.log(data)
     try {
       // const response = await emailjs.sendForm(
       //   'YOUR_SERVICE_ID',
