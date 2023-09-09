@@ -24,10 +24,10 @@ const Contact = () => {
   const onSubmit: SubmitHandler<InputType> = async (data, event) => {
     try {
       const response = await emailjs.sendForm(
-        process.env.EMAIL_JS_SERVICE_ID,
-        process.env.EMAIL_JS_DEFAULT_TEMPLATE_ID,
+        'service_yc36ptr',
+        'template_0vc93tf',
         event?.currentTarget,
-        process.env.EMAIL_JS_PUBLIC_KEY
+        '7ocdXk-QjLZPjt_A5'
       )
       console.log(response)
     } catch (error: any) {
