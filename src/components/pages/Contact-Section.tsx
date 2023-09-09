@@ -23,13 +23,13 @@ type InputType = yup.InferType<typeof contactValidations>
 const Contact = () => {
   const onSubmit: SubmitHandler<InputType> = async (data, event) => {
     try {
-      // const response = await emailjs.sendForm(
-      //   'YOUR_SERVICE_ID',
-      //   'YOUR_TEMPLATE_ID',
-      //   event?.currentTarget,
-      //   'YOUR_PUBLIC_KEY'
-      // )
-      // console.log(response)
+      const response = await emailjs.sendForm(
+        process.env.EMAIL_JS_SERVICE_ID,
+        process.env.EMAIL_JS_DEFAULT_TEMPLATE_ID,
+        event?.currentTarget,
+        process.env.EMAIL_JS_PUBLIC_KEY
+      )
+      console.log(response)
     } catch (error: any) {
       console.log(error)
     }
