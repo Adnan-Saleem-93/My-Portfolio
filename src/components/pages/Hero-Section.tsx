@@ -13,7 +13,7 @@ const links: ILinkItem[] = [
   {name: 'Skills', href: '#skills'}
 ]
 
-const Main = () => {
+const Hero = () => {
   return (
     <GenericTemplate classes="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
@@ -43,4 +43,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Hero
