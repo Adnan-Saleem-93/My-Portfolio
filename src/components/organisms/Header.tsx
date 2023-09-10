@@ -3,6 +3,7 @@
 import {SocialIcon} from 'react-social-icons'
 import {motion} from 'framer-motion'
 import Link from 'next/link'
+import GetInTouch from '../atoms/Get-In-Touch'
 
 const Header = () => {
   return (
@@ -37,10 +38,7 @@ const Header = () => {
         transition={{duration: 1.25}}
         className="cursor-pointer flex items-center"
       >
-        <SocialIcon network="email" fgColor="gray" bgColor="transparent" />
-        <Link href="#contact" className="text-gray-400 md:inline-flex hidden">
-          Get In Touch!
-        </Link>
+        <GetInTouch />
       </motion.div>
     </header>
   )
