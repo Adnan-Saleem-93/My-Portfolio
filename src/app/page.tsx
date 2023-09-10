@@ -5,8 +5,9 @@ import Header from '@/components/organisms/Header'
 import Main from '@/components/pages/Hero-Section'
 import Projects from '@/components/pages/Project-Section'
 import Skills from '@/components/pages/Skill-Section'
+import {NextPage} from 'next'
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <main className="h-screen snap-y snap-mandatory overflow-scroll z-0">
       <Header />
@@ -37,3 +38,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home

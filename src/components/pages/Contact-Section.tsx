@@ -21,12 +21,12 @@ const contactItems: IAnimatedIconLabel[] = [
 type InputType = yup.InferType<typeof contactValidations>
 
 const Contact = () => {
-  const onSubmit: SubmitHandler<InputType> = async (data, event) => {
+  const onSubmit: SubmitHandler<InputType> = async (data) => {
     try {
-      const response = await emailjs.sendForm(
+      const response = await emailjs.send(
         'service_yc36ptr',
         'template_0vc93tf',
-        event?.currentTarget,
+        data,
         '7ocdXk-QjLZPjt_A5'
       )
       console.log(response)
