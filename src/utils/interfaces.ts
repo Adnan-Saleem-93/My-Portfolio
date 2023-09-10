@@ -16,7 +16,7 @@ export interface ITechnology {
 
 export interface ILinkItem {
   name: string
-  href?: string
+  href: string
 }
 
 export interface IAnimatedIconLabel {
