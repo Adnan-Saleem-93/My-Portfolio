@@ -7,8 +7,7 @@ export const contactForm: IContactForm = {
     label: 'Name',
     type: 'text',
     placeholder: 'Name',
-    errorMessage: 'Name is required.',
-    rowWidth: 'col-span-1' // grid column span
+    errorMessage: 'Name is required.'
   },
   email: {
     name: 'email',
@@ -16,24 +15,21 @@ export const contactForm: IContactForm = {
     type: 'text',
     placeholder: 'Email Address',
     errorMessage: 'Email Address is required.',
-    invalidMessage: 'Please enter a valid Email Address',
-    rowWidth: 'col-span-1'
+    invalidMessage: 'Please enter a valid Email Address'
   },
   subject: {
     name: 'subject',
     label: 'Subject',
     type: 'text',
     placeholder: 'Subject',
-    errorMessage: 'Subject is required.',
-    rowWidth: 'col-span-2'
+    errorMessage: 'Subject is required.'
   },
   message: {
     name: 'message',
     label: 'Message',
     type: 'textarea',
     placeholder: 'Message',
-    errorMessage: 'Message is required.',
-    rowWidth: 'col-span-2'
+    errorMessage: 'Message is required.'
   }
 }
 
