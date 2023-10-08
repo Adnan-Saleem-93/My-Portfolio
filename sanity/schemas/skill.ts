@@ -12,7 +12,7 @@ export default defineType({
     }),
     defineField({
       name: 'skillImage',
-      title: 'Skill image',
+      title: 'Skill Image',
       type: 'image',
       options: {
         hotspot: true
@@ -21,7 +21,7 @@ export default defineType({
         {
           name: 'alt',
           type: 'string',
-          title: 'Skill'
+          title: 'Skill Name'
         }
       ]
     }),
@@ -31,11 +31,4 @@ export default defineType({
       type: 'string'
     })
   ]
-
-  //   preview: {
-  //     select: {
-  //       skillImg: 'skillImage',
-  //       proficiency: 'proficiency'
-  //     }
-  //   }
 })

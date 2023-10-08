@@ -32,14 +32,16 @@ const Header = () => {
           bgColor="transparent"
         />
       </motion.div>
-      <motion.div
-        initial={{x: 500, scale: 0.5, opacity: 0}}
-        animate={{x: 0, scale: 1, opacity: 1}}
-        transition={{duration: 1.25}}
-        className="cursor-pointer flex items-center"
-      >
-        <GetInTouch />
-      </motion.div>
+      <Link href="#contact">
+        <motion.div
+          initial={{x: 500, scale: 0.5, opacity: 0}}
+          animate={{x: 0, scale: 1, opacity: 1}}
+          transition={{duration: 1.25}}
+          className="cursor-pointer flex items-center"
+        >
+          <GetInTouch />
+        </motion.div>
+      </Link>
     </header>
   )
 }
