@@ -1,10 +1,8 @@
 import ExperienceCard from '../molecules/Experience-Card'
-import ImmentiaLogo from '../../../public/images/immentia-logo.png'
-import IntelligenesLogo from '../../../public/images/intelligenes-logo.png'
 import SectionTemplate from '../templates/Section-Template'
 import {client} from '../../../sanity/lib/client'
-import {urlForImage} from '../../../sanity/lib/image'
 import {format} from 'date-fns'
+import {generalImageURL} from '@/utils/helper-methods'
 
 export async function getExperience() {
   const experience = await client.fetch('*[_type == "experience"]')
@@ -13,7 +11,7 @@ export async function getExperience() {
 
 const Experience = async () => {
   const experience: any[] = await getExperience()
-  console.log(experience)
+
   return (
     <SectionTemplate
       classes="h-screen flex flex-col relative text-center md:text-left mx-auto max-w-7xl px-3 md:px-10 justify-start items-center"
@@ -21,12 +19,12 @@ const Experience = async () => {
     >
       <div className="relative top-36 flex space-x-5 md:space-x-10 items-center w-full max-w-full overflow-x-auto snap-x snap-mandatory">
         {experience.map((exp, index) => {
-          const {companyImage, startDate, endDate, companyName, jobTitle, points} = exp
-
+          const {companyImage, startDate, endDate, companyName, jobTitle, points, webLink} = exp
+          const imgSrc: string = generalImageURL(companyImage)
           return (
             <ExperienceCard
               key={index}
-              imgSrc={urlForImage(companyImage)}
+              imgSrc={imgSrc}
               alt={companyImage.alt}
               position={jobTitle}
               name={companyName}
@@ -34,7 +32,7 @@ const Experience = async () => {
                 endDate ? format(endDate, 'MMM d, y') : 'Present'
               }`}
               details={points}
-              webLink="https://www.intelligenes.com/"
+              webLink={webLink}
             />
           )
         })}
