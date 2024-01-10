@@ -41,6 +41,11 @@ export default defineType({
       type: 'datetime'
     },
     {
+      name: 'webLink',
+      title: 'Link',
+      type: 'string'
+    },
+    {
       name: 'points',
       title: 'Points',
       type: 'array',

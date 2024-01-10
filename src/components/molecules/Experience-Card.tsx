@@ -3,7 +3,7 @@ import Image, {StaticImageData} from 'next/image'
 import {ReactNode} from 'react'
 
 type Props = {
-  imgSrc: StaticImageData
+  imgSrc: StaticImageData | string
   alt: string
   name: string
   position: string
@@ -33,6 +33,8 @@ const ExperienceCard = ({
         <Image
           src={imgSrc}
           alt={alt}
+          width={225}
+          height={225}
           className="rounded-full inline lg:relative lg:top-0 lg:left-0 lg:m-0 md:mx-0 mx-auto w-32 h-32 xl:w-36 xl:h-36 object-cover object-center"
         />
         <div className="flex flex-col md:items-end">
