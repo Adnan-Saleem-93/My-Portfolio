@@ -15,7 +15,7 @@ export default defineType({
       title: 'Company Image',
       type: 'image',
       options: {
-        hotspot: true
+        hotspot: false
       },
       fields: [
         {

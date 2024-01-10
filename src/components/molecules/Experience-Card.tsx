@@ -27,7 +27,7 @@ const ExperienceCard = ({
     <a
       href={webLink}
       target="_blank"
-      className="flex flex-col items-center space-y-3 flex-shrink-0 min-h-[35rem] max-h-[35rem] w-[390px] md:w-[500px] xl:w-[47.5%] md:px-8 py-8 px-6 mb-2 rounded-lg border border-gray-500 hover:bg-gray-900"
+      className="flex flex-col items-center space-y-3 flex-shrink-0 min-h-[32rem] h-[32rem] max-h-[32rem] w-[390px] md:w-[500px] xl:w-[47.5%] md:px-8 py-8 px-6 mb-2 rounded-lg border border-gray-500 hover:bg-gray-900"
     >
       <div className="flex md:flex-row justify-between items-center flex-col w-full mb-2">
         <Image
