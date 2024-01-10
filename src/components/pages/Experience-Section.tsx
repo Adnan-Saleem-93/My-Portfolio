@@ -1,49 +1,43 @@
-'use client'
 import ExperienceCard from '../molecules/Experience-Card'
 import ImmentiaLogo from '../../../public/images/immentia-logo.png'
 import IntelligenesLogo from '../../../public/images/intelligenes-logo.png'
 import SectionTemplate from '../templates/Section-Template'
+import {client} from '../../../sanity/lib/client'
+import {urlForImage} from '../../../sanity/lib/image'
+import {format} from 'date-fns'
 
-const Experience = () => {
+export async function getExperience() {
+  const experience = await client.fetch('*[_type == "experience"]')
+  return experience
+}
+
+const Experience = async () => {
+  const experience: any[] = await getExperience()
+  console.log(experience)
   return (
     <SectionTemplate
       classes="h-screen flex flex-col relative text-center md:text-left mx-auto max-w-7xl px-3 md:px-10 justify-start items-center"
       sectionHeaderText="Experience"
     >
       <div className="relative top-36 flex space-x-5 md:space-x-10 items-center w-full max-w-full overflow-x-auto snap-x snap-mandatory">
-        <ExperienceCard
-          imgSrc={IntelligenesLogo}
-          alt="intelligenes"
-          position="Senior React Developer"
-          name="Intelligenes - Global Software Delivery"
-          period="Apr 04, 2022 - Aug 25, 2023"
-          details={[
-            'Joined as Senior React Developer.',
-            'Currently working on a large-scale project (Rungjumper) for a client in the US.',
-            'Served as Team Lead for RungJumper project and also developed most of the frontend for it.',
-            'Supervised junior React developers on other projects as well.',
-            'Converted Figma Design to React Components.',
-            "Customized Material UI theming to customer's satisfaction.",
-            'Used CI/CD and Agile Methodlogies in Azure DevOps.',
-            'Built Chrome extension in React JS'
-          ]}
-          webLink="https://www.intelligenes.com/"
-        />
-        <ExperienceCard
-          imgSrc={ImmentiaLogo}
-          alt="immentia"
-          name="Immentia SMC Pvt. Ltd."
-          position="Senior Team Lead"
-          period="Nov 26, 2019 - Mar 26, 2022"
-          details={[
-            'Joined as ASP.NET intern.',
-            'Worked with multiple technologies and frameworks including ASP.NET/Core, MERN Stack, MS SQL Server.',
-            'Supervised a small team of interns and junior developers for 9 months.',
-            'Worked in close collaboration with the CEO of the company to optimize and add features to the major projects.',
-            'Worked on major projects of the company, frequently adding new features and optimizing the existing ones such as Academic Solutions, Sales Management, FikiFoo, Design Solutions.'
-          ]}
-          webLink="https://immentia.com/"
-        />
+        {experience.map((exp, index) => {
+          const {companyImage, startDate, endDate, companyName, jobTitle, points} = exp
+
+          return (
+            <ExperienceCard
+              key={index}
+              imgSrc={urlForImage(companyImage)}
+              alt={companyImage.alt}
+              position={jobTitle}
+              name={companyName}
+              period={`${startDate ? format(startDate, 'MMM d, y') : ''} - ${
+                endDate ? format(endDate, 'MMM d, y') : 'Present'
+              }`}
+              details={points}
+              webLink="https://www.intelligenes.com/"
+            />
+          )
+        })}
       </div>
     </SectionTemplate>
   )
