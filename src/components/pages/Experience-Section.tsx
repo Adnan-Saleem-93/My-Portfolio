@@ -1,13 +1,8 @@
 import ExperienceCard from '../molecules/Experience-Card'
 import SectionTemplate from '../templates/Section-Template'
-import {client} from '../../../sanity/lib/client'
 import {format} from 'date-fns'
 import {generalImageURL} from '@/utils/helper-methods'
-
-export async function getExperience() {
-  const experience = await client.fetch('*[_type == "experience"]')
-  return experience
-}
+import {getExperience} from '@/utils/apis'
 
 const Experience = async () => {
   const experience: any[] = await getExperience()

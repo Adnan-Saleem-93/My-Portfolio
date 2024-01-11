@@ -1,5 +1,6 @@
 import {IGithubRepo} from './interfaces'
 import {GITHUB_REPOS_URL} from './constants'
+import {client} from '../../sanity/lib/client'
 
 export const getRepos = async (): Promise<IGithubRepo[] | []> => {
   try {
@@ -12,4 +13,13 @@ export const getRepos = async (): Promise<IGithubRepo[] | []> => {
   } catch (error) {
     return []
   }
+}
+export async function getExperience() {
+  const experience = await client.fetch('*[_type == "experience"]')
+  return experience
+}
+
+export async function getSkills() {
+  const experience = await client.fetch('*[_type == "skill"]')
+  return experience
 }
