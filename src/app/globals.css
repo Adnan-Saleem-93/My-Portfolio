@@ -47,7 +47,7 @@
     @apply flex flex-row justify-center items-center;
   }
   .skill--image {
-    @apply lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-24 sm:h-24 w-20 h-20;
+    @apply lg:w-28 lg:h-28 md:w-24 md:h-24 sm:w-20 sm:h-20 w-16 h-16;
   }
   .rotate-y-180 {
     transform: rotateY(180deg);
