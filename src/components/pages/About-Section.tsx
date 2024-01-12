@@ -18,12 +18,12 @@ const About = () => {
       />
       <div className="space-y-10 px-0 md:px-10 md:max-w-[60%]">
         <p className="md:text-base inline md:tracking-widest md:leading-8 text-md xl:text-lg">
-          I&apos;m a Full Stack Web Developer having nearly 4 years of industry experience in Web
-          Development. I love to work on web applications using technologies like JavaScript, React
-          JS, MERN Stack, C#, ASP.NET & MS SQL Server. I have experience in building Responsive and
-          Scalable Web apps for in-house products and client projects. I am well-experienced in
-          Full-stack Web Development, capable of working on both Frontend and Backend Applications,
-          as well as Databases.
+          I&apos;m a Full Stack Web Developer having more than 4 years of industry experience in Web
+          Development. I love to work on web applications using technologies like JavaScript,
+          ReactJS, NextJS, MERN Stack, C#, ASP.NET & MS SQL Server. I have experience in building
+          Responsive and Scalable Web apps for in-house products and client projects. I am
+          well-experienced in Full-stack Web Development, capable of working on both Frontend and
+          Backend Applications, as well as Databases.
         </p>
       </div>
     </SectionTemplate>
