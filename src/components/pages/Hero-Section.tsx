@@ -1,7 +1,6 @@
 import BackgroundCircles from '../molecules/Background-Circles'
 import Image from 'next/image'
 import profilePic from '../../../public/images/my-pic.jpg'
-import Link from 'next/link'
 import {ILinkItem} from '@/utils/interfaces'
 import Typewriter from '../atoms/Typewriter'
 import GenericTemplate from '../templates/Generic-Template'
@@ -32,9 +31,11 @@ const Hero = () => {
         <div className="flex justify-center items-center pb-2">
           {links.map((link: ILinkItem, index: number) => {
             return (
-              <Link href={link.href} key={index}>
-                <button className="link--button">{link.name}</button>
-              </Link>
+              <a href={link.href} key={index}>
+                <button type="button" className="link--button">
+                  {link.name}
+                </button>
+              </a>
             )
           })}
         </div>

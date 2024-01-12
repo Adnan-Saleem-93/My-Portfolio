@@ -2,7 +2,6 @@
 
 import {SocialIcon} from 'react-social-icons'
 import {motion} from 'framer-motion'
-import Link from 'next/link'
 import GetInTouch from '../atoms/Get-In-Touch'
 
 const Header = () => {
@@ -18,21 +17,24 @@ const Header = () => {
           target="_blank"
           fgColor="gray"
           bgColor="transparent"
+          className="hover:scale-120"
         />
         <SocialIcon
           url="https://github.com/Adnan-Saleem-93"
           target="_blank"
           fgColor="gray"
           bgColor="transparent"
+          className="hover:scale-120"
         />
         <SocialIcon
           url="https://www.facebook.com/profile.php?id=100082987400951"
           target="_blank"
           fgColor="gray"
           bgColor="transparent"
+          className="hover:scale-120"
         />
       </motion.div>
-      <Link href="#contact">
+      <a href="#contact">
         <motion.div
           initial={{x: 500, scale: 0.5, opacity: 0}}
           animate={{x: 0, scale: 1, opacity: 1}}
@@ -41,7 +43,7 @@ const Header = () => {
         >
           <GetInTouch />
         </motion.div>
-      </Link>
+      </a>
     </header>
   )
 }
