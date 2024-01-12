@@ -13,16 +13,7 @@ type Props = {
   webLink?: string
 }
 
-const ExperienceCard = ({
-  imgSrc,
-  alt,
-  name,
-  position,
-  period,
-  details,
-  webLink,
-  technologies
-}: Props) => {
+const ExperienceCard = ({imgSrc, alt, name, position, period, details, webLink}: Props) => {
   return (
     <a
       href={webLink}
@@ -44,12 +35,6 @@ const ExperienceCard = ({
         </div>
       </div>
       <div className="px-0 md:px:10 text-left">
-        <div className="flex justify-start items-center">
-          {technologies?.map((technology: ITechnology, index: number): ReactNode => {
-            const {name, img} = technology
-            return <Image key={index} src={img} alt={name} />
-          })}
-        </div>
         <ul className="list-disc list-inside space-y-1 max-h-[17.5rem] xl:max-h-[15rem] mt-1 overflow-auto">
           {details.map((detail: string, index: number): ReactNode => {
             return (

@@ -44,23 +44,9 @@ const Form = ({defaultValues, validations, form, onSubmit}: Props): ReactElement
             name={name}
             render={({field}) => {
               return type === InputTypes.TEXT ? (
-                <Input
-                  type={type}
-                  id={name}
-                  placeholder={placeholder}
-                  error={error ? true : false}
-                  errorMessage={error}
-                  {...field}
-                />
+                <Input type={type} id={name} placeholder={placeholder} {...field} />
               ) : type === InputTypes.TEXTAREA ? (
-                <TextArea
-                  type={type}
-                  id={name}
-                  placeholder={placeholder}
-                  error={error ? true : false}
-                  errorMessage={error}
-                  {...field}
-                />
+                <TextArea type={type} id={name} placeholder={placeholder} {...field} />
               ) : (
                 <></>
               )

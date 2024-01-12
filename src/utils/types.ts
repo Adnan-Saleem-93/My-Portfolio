@@ -9,8 +9,6 @@ export type InputFieldProps = {
   type: string
   id: string
   name: string
-  error: boolean
-  errorMessage: string | null
   onChange: any
   placeholder: string
   customClasses?: string
