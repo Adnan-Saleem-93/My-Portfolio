@@ -1,15 +1,13 @@
-import Link from 'next/link'
 import React from 'react'
-import {SocialIcon} from 'react-social-icons'
+import {MdEmail} from 'react-icons/md'
 
 const GetInTouch = () => {
   return (
-    <>
-      <SocialIcon network="email" fgColor="gray" bgColor="transparent" />
-      <Link href="#contact" className="text-gray-400 md:inline-flex hidden">
-        Get In Touch!
-      </Link>
-    </>
+    <span className="flex flex-row items-center justify-between gap-1 hover:scale-110">
+      <MdEmail className="h-[24px] w-[24px]" color="gray" />
+
+      <span className="text-gray-400 md:inline-flex hidden">Get In Touch!</span>
+    </span>
   )
 }
 
