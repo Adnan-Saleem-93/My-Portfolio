@@ -7,7 +7,7 @@ export default function Skill({alt, img, proficiency, title}: Props) {
   const imgSrc = generalImageURL(img)
   return (
     <div
-      className="flex--centered--row group relative rounded-full skill--image border border-gray-600"
+      className="flex--centered--row group relative rounded-full skill--image border border-gray-600 bg-[#ffffff33]"
       title={title}
     >
       <Image

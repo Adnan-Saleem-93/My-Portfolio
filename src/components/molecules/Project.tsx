@@ -6,8 +6,8 @@ import ProjectActions from './Project-Actions'
 type Props = {
   title: string
   description?: string
-  imgSrc: StaticImageData
-  link?: string
+  imgSrc: StaticImageData | string
+  link: string
   repo: string
 }
 
@@ -15,7 +15,13 @@ export default function Project({title, description = '', imgSrc, link, repo}: P
   return (
     <div className="relative min-w-[25rem] h-[25rem] min-h-[25rem] mb-6 group">
       <div className="absolute top-0 left-0 full--wh group-hover:opacity-0 group-hover:rotate-y-180">
-        <Image src={imgSrc} alt={title} className="full--wh rounded-md" />
+        <Image
+          src={imgSrc}
+          alt={title}
+          className="full--wh rounded-md object-cover"
+          height={400}
+          width={400}
+        />
       </div>
       <div className="absolute top-0 left-0 border rounded-md border-gray-500 full--wh group-hover:rotate-y-0 rotate-y-180 opacity-0 group-hover:opacity-100 flex flex-col justify-between text-center p-6">
         <div>
