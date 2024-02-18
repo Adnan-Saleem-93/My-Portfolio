@@ -18,7 +18,7 @@ const ExperienceCard = ({imgSrc, alt, name, position, period, details, webLink}:
     <a
       href={webLink}
       target="_blank"
-      className="flex flex-col items-center space-y-3 flex-shrink-0 min-h-[32rem] h-[32rem] max-h-[32rem] w-[390px] md:w-[500px] xl:w-[47.5%] md:px-8 py-8 px-6 mb-2 rounded-lg border border-gray-500 hover:bg-gray-900"
+      className="flex flex-col items-center space-y-3 flex-shrink-0 min-h-[32rem] h-[32rem] max-h-[32rem] w-[390px] md:w-[500px] xl:w-[47.5%] md:px-8 py-8 px-6 mb-2 rounded-lg border border-gray-500 hover:bg-gray-900 overflow-auto"
     >
       <div className="flex md:flex-row justify-between items-center flex-col w-full mb-2">
         <Image
@@ -35,7 +35,7 @@ const ExperienceCard = ({imgSrc, alt, name, position, period, details, webLink}:
         </div>
       </div>
       <div className="px-0 md:px:10 text-left">
-        <ul className="list-disc list-inside space-y-1 max-h-[17.5rem] xl:max-h-[15rem] mt-1 overflow-auto">
+        <ul className="list-disc list-inside space-y-1 mt-1">
           {details.map((detail: string, index: number): ReactNode => {
             return (
               <li key={index} className="text-gray-400 text-sm">

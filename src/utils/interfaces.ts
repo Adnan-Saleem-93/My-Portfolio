@@ -1,5 +1,7 @@
 import {StaticImageData} from 'next/image'
-import {FormErrorType, InputTypeValues} from './types'
+import {InputTypeValues} from './types'
+import {IconType} from 'react-icons'
+import {ReactElement} from 'react'
 
 export interface IGithubRepo {
   id: number
@@ -20,7 +22,7 @@ export interface ILinkItem {
 }
 
 export interface IAnimatedIconLabel {
-  icon: any
+  icon: ReactElement<IconType>
   label: string
 }
 

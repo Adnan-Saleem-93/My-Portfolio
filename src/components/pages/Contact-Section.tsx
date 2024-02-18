@@ -12,10 +12,10 @@ import {contactForm, contactDefaultValues, contactValidations} from '../../schem
 import {SubmitHandler} from 'react-hook-form'
 
 const contactItems: IAnimatedIconLabel[] = [
-  {icon: SiGmail, label: 'adnan13893@gmail.com'},
-  {icon: HiLocationMarker, label: 'Rawalpindi, Punjab, Pakistan'},
-  {icon: HiAtSymbol, label: 'danimalik13893@gmail.com'},
-  {icon: AiOutlineWhatsApp, label: '+92-311-5484496'}
+  {icon: <SiGmail />, label: 'adnan13893@gmail.com'},
+  {icon: <HiLocationMarker />, label: 'Rawalpindi, Punjab, Pakistan'},
+  {icon: <HiAtSymbol />, label: 'danimalik13893@gmail.com'},
+  {icon: <AiOutlineWhatsApp />, label: '+92-311-5484496'}
 ]
 
 type InputType = yup.InferType<typeof contactValidations>
@@ -39,19 +39,24 @@ const Contact = () => {
       classes="h-screen flex flex-col relative text-center md:text-left mx-auto max-w-7xl px-10 justify-evenly items-center"
       sectionHeaderText="Contact"
     >
-      <div className="w-full relative top-16 grid grid-cols-2 justify-center items-center space-x-8">
-        {contactItems.map((item, index) => {
-          const {icon, label} = item
-          return <AnimatedIconWithLabel key={index} icon={icon} label={label} index={index} />
-        })}
-      </div>
-      <div className="md:w-[50%] w-full">
+      <div className="relative md:w-[50%] w-full top-12">
         <Form
           defaultValues={contactDefaultValues}
           form={contactForm}
           validations={contactValidations}
           onSubmit={onSubmit}
         />
+      </div>
+      <div className="w-full flex flex-col justify-center items-center gap-4">
+        <h3 className="text-center tracking-[10px] text-gray-400 text-sm">
+          Additional Contact Details
+        </h3>
+        <div className="sm:w-2/3 w-full grid md:grid-cols-2 grid-cols-1 gap-8">
+          {contactItems.map((item, index) => {
+            const {icon, label} = item
+            return <AnimatedIconWithLabel key={index} Icon={icon} label={label} />
+          })}
+        </div>
       </div>
     </SectionTemplate>
   )
