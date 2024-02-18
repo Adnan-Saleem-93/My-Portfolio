@@ -12,7 +12,7 @@ const Experience = async () => {
       classes="h-screen flex flex-col relative text-center md:text-left mx-auto max-w-7xl px-3 md:px-10 justify-start items-center"
       sectionHeaderText="Experience"
     >
-      <div className="relative top-36 flex space-x-5 md:space-x-10 items-center w-full max-w-full overflow-x-auto snap-x snap-mandatory">
+      <div className="relative h-4/5 top-36 flex space-x-5 md:space-x-10 items-center w-full max-w-full overflow-x-auto snap-x snap-mandatory">
         {experience.map((exp, index) => {
           const {companyImage, startDate, endDate, companyName, jobTitle, points, webLink} = exp
           const imgSrc: string = generalImageURL(companyImage)
