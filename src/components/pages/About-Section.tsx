@@ -20,9 +20,9 @@ const About = () => {
 
   return (
     <SectionTemplate
-      classes="h-screen flex flex-col md:flex-row relative text-center md:text-left mx-auto max-w-7xl md:px-10 justify-start items-center p-6"
+      classes="h-screen flex flex-col md:flex-row relative text-center md:text-left mx-auto max-w-7xl md:px-10 justify-start items-center px-6 py-6"
       sectionHeaderText="About"
-      sectionHeaderClasses="h-1/6 pt-4"
+      sectionHeaderClasses="h-1/6"
     >
       <AboutSectionImage />
       <div className="space-y-10 px-0 md:px-10 md:max-w-[60%]">
