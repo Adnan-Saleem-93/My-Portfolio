@@ -36,10 +36,10 @@ const Contact = () => {
   }
   return (
     <SectionTemplate
-      classes="h-screen flex flex-col relative text-center md:text-left mx-auto max-w-7xl px-10 justify-evenly items-center"
+      classes="h-screen flex flex-col text-center md:text-left mx-auto max-w-7xl px-10 justify-evenly items-center"
       sectionHeaderText="Contact"
     >
-      <div className="relative md:w-[50%] w-full top-12">
+      <div className="md:w-[50%] w-full">
         <Form
           defaultValues={contactDefaultValues}
           form={contactForm}
@@ -47,7 +47,7 @@ const Contact = () => {
           onSubmit={onSubmit}
         />
       </div>
-      <div className="w-full flex flex-col justify-center items-center gap-4">
+      <div className="w-full flex flex-col justify-center items-center gap-4 mt-2">
         <h3 className="text-center tracking-[10px] text-gray-400 text-sm">
           Additional Contact Details
         </h3>

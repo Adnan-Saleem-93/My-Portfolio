@@ -20,23 +20,24 @@ const About = () => {
 
   return (
     <SectionTemplate
-      classes="h-screen flex flex-col md:flex-row relative text-center md:text-left mx-auto max-w-7xl md:px-10 justify-start items-center px-6 py-6"
+      classes="h-screen flex flex-col text-center md:text-left mx-auto max-w-7xl md:px-10 justify-center items-center px-6 py-6"
       sectionHeaderText="About"
-      sectionHeaderClasses="h-1/6"
     >
-      <AboutSectionImage />
-      <div className="space-y-10 px-0 md:px-10 md:max-w-[60%]">
-        <p className="md:text-base inline md:tracking-widest md:leading-8 text-md xl:text-lg">
-          I&apos;m a Full Stack Web Developer having {yearsPassed} years{' '}
-          {remainingMonths > 0
-            ? `and ${remainingMonths} month${remainingMonths > 1 ? 's' : ''}`
-            : ''}{' '}
-          of industry experience in Web Development. I love to work on web applications using
-          technologies like JavaScript, ReactJS, NextJS, MERN Stack, C#, ASP.NET & MS SQL Server. I
-          have experience in building Responsive and Scalable Web apps for in-house products and
-          client projects. I am well-experienced in Full-stack Web Development, capable of working
-          on both Frontend and Backend Applications, as well as Databases.
-        </p>
+      <div className="flex flex-col md:flex-row items-center justify-center h-5/6 gap-y-4">
+        <AboutSectionImage />
+        <div className="space-y-10 px-0 md:px-10 md:max-w-[60%] flex items-center">
+          <p className="md:text-base inline md:tracking-widest md:leading-8 text-md xl:text-lg">
+            I&apos;m a Full Stack Web Developer having {yearsPassed} years{' '}
+            {remainingMonths > 0
+              ? `and ${remainingMonths} month${remainingMonths > 1 ? 's' : ''}`
+              : ''}{' '}
+            of industry experience in Web Development. I love to work on web applications using
+            technologies like JavaScript, ReactJS, NextJS, MERN Stack, C#, ASP.NET & MS SQL Server.
+            I have experience in building Responsive and Scalable Web apps for in-house products and
+            client projects. I am well-experienced in Full-stack Web Development, capable of working
+            on both Frontend and Backend Applications, as well as Databases.
+          </p>
+        </div>
       </div>
     </SectionTemplate>
   )
