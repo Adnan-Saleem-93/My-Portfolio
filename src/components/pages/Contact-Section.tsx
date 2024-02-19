@@ -51,7 +51,7 @@ const Contact = () => {
         <h3 className="text-center tracking-[10px] text-gray-400 text-sm">
           Additional Contact Details
         </h3>
-        <div className="sm:w-2/3 w-full grid md:grid-cols-2 grid-cols-1 gap-8">
+        <div className="sm:w-2/3 w-full grid md:grid-cols-2 grid-cols-1 md:gap-8 gap-3">
           {contactItems.map((item, index) => {
             const {icon, label} = item
             return <AnimatedIconWithLabel key={index} Icon={icon} label={label} />
