@@ -1,7 +1,7 @@
-type Props = {text: string}
+type Props = {text: string; classes?: string}
 
-export default function SectionHeader({text}: Props) {
+export default function SectionHeader({text, classes = ''}: Props) {
   return (
-    <h3 className="absolute top-20 text-2xl uppercase tracking-[12px] text-gray-400/80">{text}</h3>
+    <h3 className={`text-2xl uppercase tracking-[12px] text-gray-400/80 ${classes}`}>{text}</h3>
   )
 }

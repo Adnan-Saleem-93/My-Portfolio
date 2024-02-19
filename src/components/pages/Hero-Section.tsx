@@ -4,6 +4,7 @@ import profilePic from '../../../public/images/my-pic.jpg'
 import {ILinkItem} from '@/utils/interfaces'
 import Typewriter from '../atoms/Typewriter'
 import GenericTemplate from '../templates/Generic-Template'
+import Header from '../organisms/Header'
 
 const links: ILinkItem[] = [
   {name: 'About', href: '#about'},
@@ -15,6 +16,7 @@ const links: ILinkItem[] = [
 const Hero = () => {
   return (
     <GenericTemplate classes="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+      <Header />
       <BackgroundCircles />
       <Image
         src={profilePic}
