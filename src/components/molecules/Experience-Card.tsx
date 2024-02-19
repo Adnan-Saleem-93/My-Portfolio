@@ -1,6 +1,7 @@
 import {ITechnology} from '@/utils/interfaces'
 import Image, {StaticImageData} from 'next/image'
 import {ReactNode} from 'react'
+import {FiArrowUpRight} from 'react-icons/fi'
 
 type Props = {
   imgSrc: StaticImageData | string
@@ -18,15 +19,15 @@ const ExperienceCard = ({imgSrc, alt, name, position, period, details, webLink}:
     <a
       href={webLink}
       target="_blank"
-      className="flex flex-col items-center space-y-3 flex-shrink-0 min-h-[32rem] h-[32rem] max-h-[32rem] w-[390px] md:w-[500px] xl:w-[47.5%] md:px-8 py-8 px-6 mb-2 rounded-lg border border-gray-500 hover:bg-gray-900 overflow-auto"
+      className="flex flex-col space-y-3 flex-shrink-0 min-h-[32rem] h-[32rem] max-h-[32rem] w-[330px] md:w-[400px] rounded-lg border border-gray-500 hover:bg-gray-900 overflow-hidden gap-y-3"
     >
-      <div className="flex md:flex-row justify-between items-center flex-col w-full mb-2">
+      <div className="flex md:flex-row justify-between items-center flex-col w-full md:px-4 py-3 px-3">
         <Image
           src={imgSrc}
           alt={alt}
-          width={225}
-          height={225}
-          className="rounded-full inline lg:relative lg:top-0 lg:left-0 lg:m-0 md:mx-0 mx-auto w-32 h-32 xl:w-36 xl:h-36 object-cover object-center"
+          width={175}
+          height={175}
+          className="rounded-full inline lg:relative lg:top-0 lg:left-0 lg:m-0 md:mx-0 mx-auto w-28 h-28 object-cover object-center"
         />
         <div className="flex flex-col md:items-end">
           <h3 className="text-2xl text-gray-300 tracking-wide">{position}</h3>
@@ -34,12 +35,16 @@ const ExperienceCard = ({imgSrc, alt, name, position, period, details, webLink}:
           <p className="text-gray-400 text-sm">{period}</p>
         </div>
       </div>
-      <div className="px-0 md:px:10 text-left">
-        <ul className="list-disc list-inside space-y-1 mt-1">
+
+      <div className="overflow-auto py-3 m-0">
+        <ul className="list-none space-y-1 px-3">
           {details.map((detail: string, index: number): ReactNode => {
             return (
-              <li key={index} className="text-gray-400 text-sm">
-                {detail}
+              <li key={index} className="text-gray-400 text-[12px] p-0 flex gap-2">
+                <span className="w-[1rem]">
+                  <FiArrowUpRight color="#fff" height={15} width={15} />
+                </span>
+                <span className="text-justify">{detail}</span>
               </li>
             )
           })}
