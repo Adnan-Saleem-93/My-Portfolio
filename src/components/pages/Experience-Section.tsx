@@ -9,10 +9,10 @@ const Experience = async () => {
 
   return (
     <SectionTemplate
-      classes="h-screen flex flex-col relative text-center md:text-left mx-auto max-w-7xl px-3 py-6 md:px-10 justify-start items-center gap-y-8"
+      classes="h-screen flex flex-col text-center md:text-left mx-auto max-w-[95%] md:max-w-full px-3 py-6 md:px-10 justify-center items-center gap-y-8"
       sectionHeaderText="Experience"
     >
-      <div className="h-4/5 flex space-x-5 md:space-x-10 items-center w-full max-w-full overflow-x-auto snap-x snap-mandatory">
+      <div className="h-4/5 flex xl:justify-center space-x-5 md:space-x-10 items-center w-full max-w-full overflow-x-auto snap-x snap-mandatory">
         {experience.map((exp, index) => {
           const {companyImage, startDate, endDate, companyName, jobTitle, points, webLink} = exp
           const imgSrc: string = generalImageURL(companyImage)

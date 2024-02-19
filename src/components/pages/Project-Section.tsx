@@ -8,10 +8,10 @@ const Projects = async () => {
 
   return (
     <SectionTemplate
-      classes="h-screen flex flex-col md:flex-row relative text-center md:text-left mx-auto px-2 md:px-10 justify-evenly items-center"
+      classes="h-screen flex flex-col text-center md:text-left mx-auto px-2 md:px-10 justify-evenly items-center"
       sectionHeaderText="Projects"
     >
-      <div className="relative top-8 w-full flex overflow-x-auto z-20 space-x-12">
+      <div className="w-full flex overflow-x-auto z-20 space-x-12">
         {projects.map((project: any, index: number) => {
           const {projectName, projectDescription, codeUrl, demoUrl, projectImage} = project
           const imgSrc: string = generalImageURL(projectImage)

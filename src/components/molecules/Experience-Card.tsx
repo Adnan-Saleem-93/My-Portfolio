@@ -19,9 +19,9 @@ const ExperienceCard = ({imgSrc, alt, name, position, period, details, webLink}:
     <a
       href={webLink}
       target="_blank"
-      className="flex flex-col space-y-3 flex-shrink-0 min-h-[32rem] h-[32rem] max-h-[32rem] w-[330px] md:w-[400px] rounded-lg border border-gray-500 hover:bg-gray-900 overflow-hidden gap-y-3"
+      className="flex flex-col space-y-3 flex-shrink-0 min-h-[32rem] h-[32rem] max-h-[32rem] w-[330px] lg:w-[400px] rounded-lg border border-gray-500 hover:bg-gray-900 overflow-hidden gap-y-3"
     >
-      <div className="flex md:flex-row justify-between items-center flex-col w-full md:px-4 py-3 px-3">
+      <div className="flex md:flex-row justify-between items-center flex-col w-full md:px-4 py-3 px-3 gap-x-3">
         <Image
           src={imgSrc}
           alt={alt}
@@ -29,9 +29,9 @@ const ExperienceCard = ({imgSrc, alt, name, position, period, details, webLink}:
           height={175}
           className="rounded-full inline lg:relative lg:top-0 lg:left-0 lg:m-0 md:mx-0 mx-auto w-28 h-28 object-cover object-center"
         />
-        <div className="flex flex-col md:items-end">
-          <h3 className="text-2xl text-gray-300 tracking-wide">{position}</h3>
-          <h3 className="font-bold text-sm text-gray-200 tracking-wide">{name}</h3>
+        <div className="flex flex-col md:items-end text-right">
+          <h3 className="text-xl text-gray-300 tracking-wide">{position}</h3>
+          <h3 className="font-bold text-sm text-gray-200">{name}</h3>
           <p className="text-gray-400 text-sm">{period}</p>
         </div>
       </div>

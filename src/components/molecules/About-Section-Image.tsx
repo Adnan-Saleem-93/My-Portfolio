@@ -11,7 +11,7 @@ export default function AboutSectionImage({}: Props) {
       initial={{x: -500, opacity: 0}}
       animate={{x: 0, opacity: 1}}
       transition={{duration: 0.5}}
-      className="h-2/6"
+      className="h-2/6 md:h-full md:flex md:items-center"
     >
       <Image
         src={myPic2}
