@@ -6,7 +6,7 @@ import GetInTouch from '../atoms/Get-In-Touch'
 
 const Header = () => {
   return (
-    <header className="w-full flex justify-between md:justify-around items-center sticky top-0 p-5">
+    <header className="w-full flex justify-between md:justify-around items-center absolute top-0 p-5">
       <motion.div
         initial={{x: -500, scale: 0.5, opacity: 0}}
         animate={{x: 0, scale: 1, opacity: 1}}

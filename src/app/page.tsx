@@ -9,30 +9,30 @@ import {NextPage} from 'next'
 
 const Home: NextPage = () => {
   return (
-    <main className="h-screen overflow-scroll z-0">
+    <main className="relative h-screen snap-y snap-mandatory overflow-scroll z-0">
       <Header />
 
-      <section id="main">
+      <section id="main" className="snap-start">
         <Main />
       </section>
 
-      <section id="about">
+      <section id="about" className="snap-center">
         <About />
       </section>
 
-      <section id="experience">
+      <section id="experience" className="snap-center">
         <Experience />
       </section>
 
-      <section id="skills">
+      <section id="skills" className="snap-center">
         <Skills />
       </section>
 
-      <section id="projects">
+      <section id="projects" className="snap-center">
         <Projects />
       </section>
 
-      <section id="contact">
+      <section id="contact" className="snap-end">
         <Contact />
       </section>
     </main>
