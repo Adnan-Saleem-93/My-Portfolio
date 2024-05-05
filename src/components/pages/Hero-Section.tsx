@@ -6,13 +6,6 @@ import Typewriter from '../atoms/Typewriter'
 import GenericTemplate from '../templates/Generic-Template'
 import Header from '../organisms/Header'
 
-const links: ILinkItem[] = [
-  {name: 'About', href: '#about'},
-  {name: 'Experience', href: '#experience'},
-  {name: 'Projects', href: '#projects'},
-  {name: 'Skills', href: '#skills'}
-]
-
 const Hero = () => {
   return (
     <GenericTemplate classes="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
@@ -30,7 +23,7 @@ const Hero = () => {
           Full Stack Web Developer
         </h1>
         <Typewriter />
-        <div className="flex justify-center items-center pb-2">
+        {/* <div className="flex justify-center items-center pb-2">
           {links.map((link: ILinkItem, index: number) => {
             return (
               <a href={link.href} key={index}>
@@ -40,7 +33,7 @@ const Hero = () => {
               </a>
             )
           })}
-        </div>
+        </div> */}
       </div>
     </GenericTemplate>
   )
