@@ -19,8 +19,14 @@ export async function getExperience() {
       {},
       { next: { revalidate: 600 } }
     )
-    return experience
+
+    let sortedExperience = experience?.sort((a, b) =>
+      b.startDate.localeCompare(a.startDate)
+    )
+
+    return sortedExperience
   } catch (error) {
+    console.log(error)
     return []
   }
 }

@@ -1,7 +1,7 @@
-import {generalImageURL} from '@/utils/helper-methods'
+import { generalImageURL } from '@/utils/helper-methods'
 import Project from '../molecules/Project'
 import SectionTemplate from '../templates/Section-Template'
-import {getProjects} from '@/utils/apis'
+import { getProjects } from '@/utils/apis'
 
 const Projects = async () => {
   const projects = await getProjects()
@@ -13,7 +13,13 @@ const Projects = async () => {
     >
       <div className="w-full flex overflow-x-auto z-20 space-x-12">
         {projects.map((project: any, index: number) => {
-          const {projectName, projectDescription, codeUrl, demoUrl, projectImage} = project
+          const {
+            projectName,
+            projectDescription,
+            codeUrl,
+            demoUrl,
+            projectImage,
+          } = project
           const imgSrc: string = generalImageURL(projectImage)
           return (
             <Project
