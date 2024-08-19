@@ -33,8 +33,7 @@ const About = () => {
               : ''}{' '}
             of industry experience in Web Development. I love to work on web applications using
             technologies like JavaScript, ReactJS, NextJS, MERN Stack, C#, ASP.NET & MS SQL Server.
-            I have experience in building Responsive and Scalable Web apps for in-house products and
-            client projects. I am well-experienced in Full-stack Web Development, capable of working
+            I have experience in building Responsive and Scalable web apps and chrome extensions. I am well-experienced in Full-stack Web Development, capable of working
             on both Frontend and Backend Applications, as well as Databases.
           </p>
         </div>
