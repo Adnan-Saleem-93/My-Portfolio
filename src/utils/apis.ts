@@ -19,8 +19,12 @@ export async function getExperience() {
 
 export async function getSkills() {
   try {
-    const experience = await client.fetch('*[_type == "skill"]')
-    return experience
+    const skills = await client.fetch(
+      '*[_type == "skill"]',
+      {},
+      { next: { revalidate: 600 } }
+    );
+    return skills;
   } catch (error) {
     return []
   }

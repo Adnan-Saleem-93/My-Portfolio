@@ -28,7 +28,7 @@
   border: 3px solid var(--primary);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 @layer base {
   body {
     @apply font-Raleway bg-[#0e2a47] text-white;
@@ -46,8 +46,11 @@
   .flex--centered--row {
     @apply flex flex-row justify-center items-center;
   }
+  .flex--centered--col {
+    @apply flex flex-col justify-center items-center;
+  }
   .skill--image {
-    @apply lg:w-28 lg:h-28 md:w-24 md:h-24 sm:w-20 sm:h-20 w-16 h-16;
+    @apply lg:w-24 lg:h-24 md:w-24 md:h-24 sm:w-24 sm:h-24 w-16 h-16;
   }
   .rotate-y-180 {
     transform: rotateY(180deg);

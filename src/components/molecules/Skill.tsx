@@ -13,12 +13,13 @@ export default function Skill({alt, img, proficiency, title}: Props) {
       <Image
         src={imgSrc}
         alt={alt}
-        width={190}
-        height={190}
+        width={150}
+        height={150}
         className="rounded-full object-cover"
       />
-      <div className="flex--centered--row absolute top-0 text-black sm:text-2xl text-2xl lg:text-4xl font-bold rounded-full skill--image group-hover:opacity-90 opacity-0 transition-all duration-200 ease-in-out bg-slate-300 cursor-default">
-        {proficiency}
+      <div className="flex--centered--col absolute top-0 text-black rounded-full skill--image group-hover:opacity-90 opacity-0 transition-all duration-200 ease-in-out bg-slate-300 cursor-default">
+        <span className="text-sm">{title}</span>
+        <span className="text-xl font-bold">{proficiency}</span>
       </div>
     </div>
   )

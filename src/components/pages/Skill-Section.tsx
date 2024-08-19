@@ -8,7 +8,7 @@ const Skills = async () => {
   return (
     <SectionTemplate
       classes="h-screen flex flex-col justify-start relative text-center mx-auto max-w-[90vw] md:px-10 items-center px-3 py-6 gap-y-12"
-      sectionHeaderText="Skill"
+      sectionHeaderText="Skills"
     >
       <div className="flex flex-col items-center gap-y-2">
         <p className="text-sm text-gray-500 tracking-widest">
