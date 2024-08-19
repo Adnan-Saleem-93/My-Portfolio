@@ -1,9 +1,5 @@
-import ExperienceCard from '../molecules/Experience-Card'
-import SectionTemplate from '../templates/Section-Template'
-import { format } from 'date-fns'
-import { generalImageURL } from '@/utils/helper-methods'
 import { getExperience } from '@/utils/apis'
-import { MdCheckCircle } from 'react-icons/md'
+import ExperienceAccordion from '../molecules/Experience Accordion'
 
 const Experience = async () => {
   const experience: any[] = await getExperience()
@@ -20,41 +16,11 @@ const Experience = async () => {
           <div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
             <div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-300">
               {experience.map((exp, index) => {
-                const {
-                  startDate,
-                  endDate,
-                  companyName,
-                  jobTitle,
-                  // points,
-                } = exp
-
-                const period = `${startDate ? format(startDate, 'MMM d, y') : ''} - ${
-                  endDate ? format(endDate, 'MMM d, y') : 'Present'
-                }`
-                const isPresentCompany: boolean = period.includes('Present')
-
                 return (
-                  <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600">
-                    <h3 className="text-xl flex items-center gap-x-3 font-semibold">
-                      {companyName}
-                      {isPresentCompany && (
-                        <span className="inline ">
-                          <MdCheckCircle
-                            className="h-[18px] w-[18px]"
-                            color="blue"
-                          />
-                        </span>
-                      )}
-                      <time className="text-xs uppercase dark:text-gray-500">
-                        {period}
-                      </time>
-                    </h3>
-
-                    <h4 className="text-lg font-bold text-blue-800">
-                      {jobTitle}
-                    </h4>
-                    <p className="mt-3"></p>
-                  </div>
+                  <ExperienceAccordion
+                    key={`exp-accordion-${index + 1}`}
+                    exp={exp}
+                  />
                 )
               })}
             </div>
