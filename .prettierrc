@@ -20,6 +20,5 @@
   "embeddedLanguageFormatting": "auto",
   "vueIndentScriptAndStyle": false,
   "experimentalTernaries": false,
-  "filepath": "c:\\WORK\\LEARNING\\My-Portfolio\\src\\utils\\apis.ts",
   "parser": "typescript"
 }

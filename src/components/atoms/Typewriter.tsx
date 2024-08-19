@@ -17,7 +17,7 @@ export default function Typewriter({}: Props) {
     deleteSpeed: 100,
   })
   return (
-    <h1 className="text-4xl py-2">
+    <h1 className="text-3xl py-2">
       I&apos;m <span className="text-green-400">{text}</span>
       <Cursor cursorColor="#ffff00" />
     </h1>
