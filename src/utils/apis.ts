@@ -21,7 +21,7 @@ export async function getExperience() {
     )
 
     let sortedExperience = experience?.sort((a, b) =>
-      b.startDate.localeCompare(a.startDate)
+      a.startDate.localeCompare(b.startDate)
     )
 
     return sortedExperience

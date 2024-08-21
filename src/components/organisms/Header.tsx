@@ -4,6 +4,7 @@ import { SocialIcon } from 'react-social-icons'
 import { motion } from 'framer-motion'
 import GetInTouch from '../atoms/Get-In-Touch'
 import { useState } from 'react'
+import { ILinkItem } from '@/utils/interfaces'
 
 const Header = () => {
   const [socialIcons, setSocialIcons] = useState([
@@ -30,6 +31,12 @@ const Header = () => {
     },
   ])
 
+  const links: ILinkItem[] = [
+    { name: 'Experience', href: '#experience' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Skills', href: '#skills' },
+  ]
+
   const setHoverState = ({
     id,
     isHovered,
@@ -46,7 +53,7 @@ const Header = () => {
   }
   return (
     <header className="w-full flex justify-between md:justify-around items-center p-5">
-      <motion.div
+      {/* <motion.div
         initial={{ x: -500, scale: 0.5, opacity: 0 }}
         animate={{ x: 0, scale: 1, opacity: 1 }}
         transition={{ duration: 1.25 }}
@@ -75,7 +82,40 @@ const Header = () => {
         >
           <GetInTouch />
         </motion.div>
-      </a>
+      </a> */}
+      <div className="flex justify-center items-center pb-2">
+        {links.map((link: ILinkItem, index: number) => {
+          return (
+            <>
+              <a href={link.href} key={index} className="group link--button">
+                {link.name}
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-secondary"></span>
+              </a>
+            </>
+          )
+        })}
+      </div>
+      <motion.div
+        initial={{ x: 500, scale: 0.5, opacity: 0 }}
+        animate={{ x: 0, scale: 1, opacity: 1 }}
+        transition={{ duration: 1.25 }}
+      >
+        {socialIcons.map((icon) => {
+          const { id, url, fgColor, isHovered, hoverColor } = icon
+          return (
+            <SocialIcon
+              key={id}
+              url={url}
+              target="_blank"
+              fgColor={isHovered ? hoverColor : fgColor}
+              bgColor="transparent"
+              onMouseEnter={() => setHoverState({ id, isHovered: true })}
+              onMouseLeave={() => setHoverState({ id, isHovered: false })}
+            />
+          )
+        })}
+      </motion.div>
+      {/* </div> */}
     </header>
   )
 }
