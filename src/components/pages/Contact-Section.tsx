@@ -1,21 +1,25 @@
 'use client'
 import AnimatedIconWithLabel from '../molecules/Animated-Icon-With-Label'
-import {IAnimatedIconLabel} from '@/utils/interfaces'
-import {HiLocationMarker, HiAtSymbol} from 'react-icons/hi'
-import {AiOutlineWhatsApp} from 'react-icons/ai'
-import {SiGmail} from 'react-icons/si'
+import { IAnimatedIconLabel } from '@/utils/interfaces'
+import { HiLocationMarker, HiAtSymbol } from 'react-icons/hi'
+import { AiOutlineWhatsApp } from 'react-icons/ai'
+import { SiGmail } from 'react-icons/si'
 import SectionTemplate from '../templates/Section-Template'
 import Form from '../molecules/Form'
 import * as yup from 'yup'
 import emailjs from '@emailjs/browser'
-import {contactForm, contactDefaultValues, contactValidations} from '../../schemas/contact'
-import {SubmitHandler} from 'react-hook-form'
+import {
+  contactForm,
+  contactDefaultValues,
+  contactValidations,
+} from '../../schemas/contact'
+import { SubmitHandler } from 'react-hook-form'
 
 const contactItems: IAnimatedIconLabel[] = [
-  {icon: <SiGmail />, label: 'adnan13893@gmail.com'},
-  {icon: <HiLocationMarker />, label: 'Rawalpindi, Punjab, Pakistan'},
-  {icon: <HiAtSymbol />, label: 'danimalik13893@gmail.com'},
-  {icon: <AiOutlineWhatsApp />, label: '+92-311-5484496'}
+  { icon: <SiGmail />, label: 'adnansaleem.dev@gmail.com' },
+  { icon: <HiLocationMarker />, label: 'Rawalpindi, Punjab, Pakistan' },
+  { icon: <HiAtSymbol />, label: 'danimalik13893@gmail.com' },
+  { icon: <AiOutlineWhatsApp />, label: '+92-311-5484496' },
 ]
 
 type InputType = yup.InferType<typeof contactValidations>
@@ -53,8 +57,10 @@ const Contact = () => {
         </h3>
         <div className="sm:w-2/3 w-full grid md:grid-cols-2 grid-cols-1 md:gap-8 gap-3">
           {contactItems.map((item, index) => {
-            const {icon, label} = item
-            return <AnimatedIconWithLabel key={index} Icon={icon} label={label} />
+            const { icon, label } = item
+            return (
+              <AnimatedIconWithLabel key={index} Icon={icon} label={label} />
+            )
           })}
         </div>
       </div>

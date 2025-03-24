@@ -16,15 +16,15 @@ const remainingMonths = monthsPassed - yearsPassed * 12
 
 const AboutSection = () => {
   return (
-    <p className="inline md:tracking-wider md:leading-6 text-[13px]">
+    <p className="inline md:tracking-wider md:leading-6 text-[13px] text-white">
       I&apos;m a Full Stack Web Developer having {yearsPassed} years{' '}
       {remainingMonths > 0
         ? `and ${remainingMonths} month${remainingMonths > 1 ? 's' : ''}`
         : ''}{' '}
-      of experience in Web Development. I have experience in building Responsive
-      and Scalable web apps and chrome extensions. I am well-experienced in
-      Full-stack Web Development, capable of working on both Frontend and
-      Backend Applications, as well as Databases.
+      of experience in Web Development. I have experience in building
+      Responsive, Performant and Scalable Web Apps and Chrome Extensions. I am
+      well-experienced in Full-stack Web Development, capable of working on both
+      Frontend and Backend Applications, as well as Databases.
     </p>
   )
 }

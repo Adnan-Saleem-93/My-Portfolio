@@ -22,7 +22,7 @@ const ExperienceAccordion = ({ exp }: { exp: any }) => {
       onClick={handleClick}
       className="flex flex-col hover:ring-1 mb-4 hover:ring-sky-500 cursor-pointer hover:px-1 sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-secondary"
     >
-      <h3 className="text-xl flex items-center gap-x-3 font-semibold">
+      <h3 className="text-xl flex items-center gap-x-3 font-semibold text-white">
         {companyName}
         {isPresentCompany && (
           <span className="inline ">
@@ -33,9 +33,9 @@ const ExperienceAccordion = ({ exp }: { exp: any }) => {
           </span>
         )}
       </h3>
-      <time className="text-xs uppercase dark:text-gray-400">{period}</time>
+      <time className="text-xs uppercase text-gray-400">{period}</time>
 
-      <h4 className="text-lg font-bold text-blue-400">{jobTitle}</h4>
+      <h4 className="text-lg font-bold text-blue-100">{jobTitle}</h4>
       {open && (
         <div className="overflow-auto py-3 m-0 ">
           <ul className="list-none space-y-1 px-3">
