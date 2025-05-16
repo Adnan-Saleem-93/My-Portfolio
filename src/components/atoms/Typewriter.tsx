@@ -11,14 +11,19 @@ type Props = {}
 
 export default function Typewriter({}: Props) {
   const [text, count]: [text: string, count: TypewriterHelper] = useTypewriter({
-    words: ['a ReactJS Developer', 'an ASP.NET Developer', 'a MERN Developer'],
+    words: [
+      'a ReactJS Developer',
+      'a NextJS Developer',
+      'an ASP.NET Developer',
+      'a MERN Developer',
+    ],
     loop: true,
     delaySpeed: 3000,
     deleteSpeed: 100,
   })
   return (
-    <h1 className="text-3xl py-2 text-white">
-      I&apos;m <span className="text-green-400">{text}</span>
+    <h1 className="text-lg text-white font-light">
+      I&apos;m <span className="text-red-400 font-bold">{text}</span>
       <Cursor cursorColor="#ffff00" />
     </h1>
   )

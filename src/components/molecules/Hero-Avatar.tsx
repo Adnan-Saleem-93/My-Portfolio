@@ -5,13 +5,13 @@ const HeroAvatar = () => {
   return (
     <div className="flex">
       <div className="relative flex justify-center items-center">
-        <div className="absolute rounded-full border border-[#bbb5a6] lg:w-64 lg:h-64 w-40 h-40 md:w-52 md:h-52 animate-pulse" />
+        <div className="absolute rounded-full border border-[#898781] w-24 h-24 animate-pulse" />
         <Image
           src={profilePic}
           alt="profile-avatar"
-          className="rounded-full object-cover lg:w-56 lg:h-56 md:w-44 md:h-44 w-32 h-32"
-          width={150}
-          height={150}
+          className="rounded-full object-cover w-20 h-20"
+          width={50}
+          height={50}
         />
       </div>
     </div>

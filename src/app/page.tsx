@@ -1,3 +1,4 @@
+import AboutSection from '@/components/pages/About-Section'
 import Contact from '@/components/pages/Contact-Section'
 import Experience from '@/components/pages/Experience-Section'
 import Hero from '@/components/pages/Hero-Section'
@@ -7,9 +8,13 @@ import { NextPage } from 'next'
 
 const Home: NextPage = () => {
   return (
-    <main className="relative h-screen snap-y snap-mandatory overflow-scroll z-0">
-      <section id="main" className="snap-start">
+    <main className="relative h-screen overflow-scroll z-0 p-16">
+      <section id="main">
         <Hero />
+      </section>
+
+      <section id="about">
+        <AboutSection />
       </section>
 
       <section id="experience" className="snap-center">

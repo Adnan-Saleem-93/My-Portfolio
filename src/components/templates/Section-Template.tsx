@@ -12,10 +12,10 @@ export default function SectionTemplate({
   children,
   classes,
   sectionHeaderText,
-  sectionHeaderClasses = ''
+  sectionHeaderClasses = '',
 }: Props) {
   return (
-    <article className={classes}>
+    <article className={`py-12 ${classes}`}>
       <SectionHeader text={sectionHeaderText} classes={sectionHeaderClasses} />
       {children}
     </article>
