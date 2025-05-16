@@ -25,7 +25,7 @@ const Experience = async () => {
             className="gap-x-8 text-gray-400 columns-3"
           >
             <p>{isPresentCompany ? `Since ${formattedStartDate}` : period}</p>
-            <p>{companyName}</p>
+            <p className="text-slate-100">{companyName}</p>
             <p>{jobTitle}</p>
           </div>
         )
