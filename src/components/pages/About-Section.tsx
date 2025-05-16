@@ -26,7 +26,7 @@ const About = () => {
   ]
 
   return (
-    <SectionTemplate classes="h-screen flex flex-col" sectionHeaderText="about">
+    <SectionTemplate sectionHeaderText="about">
       <div className="flex flex-col justify-center gap-y-4">
         {points.map((point, index) => {
           return (
