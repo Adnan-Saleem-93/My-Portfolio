@@ -23,7 +23,7 @@ export default function Typewriter({}: Props) {
   })
   return (
     <h1 className="text-lg text-white font-light">
-      I&apos;m <span className="text-red-400 font-bold">{text}</span>
+      I&apos;m <span className="text-orange-400 font-bold">{text}</span>
       <Cursor cursorColor="#ffff00" />
     </h1>
   )

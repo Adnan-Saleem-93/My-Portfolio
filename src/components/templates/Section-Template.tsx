@@ -15,7 +15,7 @@ export default function SectionTemplate({
   sectionHeaderClasses = '',
 }: Props) {
   return (
-    <article className={`py-12 ${classes}`}>
+    <article className={`py-12 flex flex-col gap-y-4 ${classes}`}>
       <SectionHeader text={sectionHeaderText} classes={sectionHeaderClasses} />
       {children}
     </article>
