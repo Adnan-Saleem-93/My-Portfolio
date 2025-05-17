@@ -1,32 +1,66 @@
-import {getSkills} from '@/utils/apis'
-import {client} from '../../../sanity/lib/client'
-import Skill from '../molecules/Skill'
 import SectionTemplate from '../templates/Section-Template'
 
+import { Icon } from '@iconify/react'
+
+const SKILL_ICONS = [
+  { title: 'React', iconName: 'skill-icons:react-dark', customClasses: '' },
+  { title: 'Next.js', iconName: 'skill-icons:nextjs-light', customClasses: '' },
+  {
+    title: 'JavaScript',
+    iconName: 'skill-icons:javascript',
+    customClasses: '',
+  },
+  {
+    title: 'TypeScript',
+    iconName: 'skill-icons:typescript',
+    customClasses: '',
+  },
+  { title: 'HTML', iconName: 'skill-icons:html', customClasses: '' },
+  { title: 'CSS', iconName: 'skill-icons:css', customClasses: '' },
+  {
+    title: 'Tailwind CSS',
+    iconName: 'skill-icons:tailwindcss-dark',
+    customClasses: '',
+  },
+  { title: 'Node.js', iconName: 'skill-icons:nodejs-dark', customClasses: '' },
+  {
+    title: 'Express.js',
+    iconName: 'skill-icons:expressjs-light',
+    customClasses: '',
+  },
+  { title: 'MongoDB', iconName: 'skill-icons:mongodb', customClasses: '' },
+  {
+    title: 'Microsoft SQL Server',
+    iconName: 'devicon:microsoftsqlserver-wordmark',
+    customClasses: 'bg-slate-400 rounded-2xl p-1',
+  },
+  { title: 'Git', iconName: 'skill-icons:git', customClasses: '' },
+  { title: 'GitHub', iconName: 'skill-icons:github-light', customClasses: '' },
+  { title: 'npm', iconName: 'skill-icons:npm-dark', customClasses: '' },
+  { title: 'Sanity', iconName: 'devicon:sanity', customClasses: 'rounded-2xl' },
+  { title: 'Vite', iconName: 'skill-icons:vite-dark', customClasses: '' },
+  {
+    title: 'Material UI',
+    iconName: 'skill-icons:materialui-light',
+    customClasses: '',
+  },
+  { title: 'C#', iconName: 'skill-icons:cs', customClasses: '' },
+  { title: '.NET', iconName: 'skill-icons:dotnet', customClasses: '' },
+]
 const Skills = async () => {
-  const skills = await getSkills()
   return (
-    <SectionTemplate
-      classes="h-screen flex flex-col justify-start relative text-center mx-auto max-w-[90vw] md:px-10 items-center px-3 py-6 gap-y-12"
-      sectionHeaderText="Skills"
-    >
-      <div className="flex flex-col items-center gap-y-2">
-        <p className="text-sm text-gray-500 tracking-widest">
-          Hover over the skills for proficiency
-        </p>
-        <div className="grid grid-cols-4 gap-5">
-          {skills.map((skill: any, index: number) => {
-            return (
-              <Skill
-                key={index}
-                alt={skill.alt}
-                img={skill.skillImage}
-                proficiency={skill.proficiency}
-                title={skill.title}
+    <SectionTemplate sectionHeaderText="Skills">
+      <div className="grid grid-cols-8 gap-5">
+        {SKILL_ICONS.map((skill: any) => {
+          return (
+            <div key={skill.iconName} title={skill.title}>
+              <Icon
+                icon={skill.iconName}
+                className={`h-16 w-16 ${skill.customClasses}`}
               />
-            )
-          })}
-        </div>
+            </div>
+          )
+        })}
       </div>
     </SectionTemplate>
   )
