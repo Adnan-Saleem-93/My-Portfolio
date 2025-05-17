@@ -20,8 +20,8 @@ export async function getExperience() {
       { next: { revalidate: 600 } }
     )
 
-    let sortedExperience = experience?.sort((a, b) =>
-      b.startDate.localeCompare(a.startDate)
+    let sortedExperience = experience?.sort((a: any, b: any) =>
+      b?.startDate?.localeCompare(a?.startDate)
     )
 
     return sortedExperience
