@@ -30,7 +30,7 @@ const Contact = () => {
     }
   }
   return (
-    <SectionTemplate sectionHeaderText="Contact">
+    <SectionTemplate sectionHeaderText="Contact me">
       <div className="md:w-[50%] w-full">
         <Form
           defaultValues={contactDefaultValues}

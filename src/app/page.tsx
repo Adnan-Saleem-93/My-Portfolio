@@ -3,7 +3,6 @@ import AboutSection from '@/components/pages/About-Section'
 import Contact from '@/components/pages/Contact-Section'
 import Experience from '@/components/pages/Experience-Section'
 import Hero from '@/components/pages/Hero-Section'
-import Projects from '@/components/pages/Project-Section'
 import Skills from '@/components/pages/Skill-Section'
 import { NextPage } from 'next'
 
