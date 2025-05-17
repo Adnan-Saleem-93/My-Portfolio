@@ -1,3 +1,4 @@
+import Footer from '@/components/organisms/Footer'
 import AboutSection from '@/components/pages/About-Section'
 import Contact from '@/components/pages/Contact-Section'
 import Experience from '@/components/pages/Experience-Section'
@@ -17,21 +18,21 @@ const Home: NextPage = () => {
         <AboutSection />
       </section>
 
-      <section id="experience" className="snap-center">
+      <section id="experience">
         <Experience />
       </section>
 
-      <section id="skills" className="snap-center">
+      <section id="skills">
         <Skills />
       </section>
 
-      <section id="projects" className="snap-center">
-        <Projects />
-      </section>
-
-      <section id="contact" className="snap-end">
+      <section id="contact">
         <Contact />
       </section>
+
+      <footer id="footer">
+        <Footer />
+      </footer>
     </main>
   )
 }

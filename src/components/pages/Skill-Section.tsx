@@ -50,7 +50,7 @@ const SKILL_ICONS = [
 const Skills = async () => {
   return (
     <SectionTemplate sectionHeaderText="Skills">
-      <div className="grid grid-cols-8 gap-5">
+      <div className="grid grid-cols-8 gap-y-5">
         {SKILL_ICONS.map((skill: any) => {
           return (
             <div key={skill.iconName} title={skill.title}>
