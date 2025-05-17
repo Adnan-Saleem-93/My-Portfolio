@@ -46,11 +46,13 @@ const SKILL_ICONS = [
   },
   { title: 'C#', iconName: 'skill-icons:cs', customClasses: '' },
   { title: '.NET', iconName: 'skill-icons:dotnet', customClasses: '' },
+  { title: 'Postman', iconName: 'skill-icons:postman', customClasses: '' },
+  { title: 'Python', iconName: 'skill-icons:python-light', customClasses: '' },
 ]
 const Skills = async () => {
   return (
     <SectionTemplate sectionHeaderText="Skills">
-      <div className="grid grid-cols-8 gap-y-5">
+      <div className="flex flex-wrap gap-5 items-center">
         {SKILL_ICONS.map((skill: any) => {
           return (
             <div key={skill.iconName} title={skill.title}>
