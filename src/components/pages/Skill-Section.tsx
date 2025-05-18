@@ -81,6 +81,8 @@ const Skills = async () => {
         {SKILL_ICONS.map((skill: any) => {
           return (
             <div key={skill.iconName} title={skill.title}>
+              {/* // TODO: Add Tooltip */}
+              {/* // TODO: Add Skill Proficiency Level */}
               <Icon
                 icon={skill.iconName}
                 className={`h-16 w-16 ${skill.customClasses}`}

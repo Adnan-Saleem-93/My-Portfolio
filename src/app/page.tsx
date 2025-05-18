@@ -8,7 +8,7 @@ import { NextPage } from 'next'
 
 const Home: NextPage = () => {
   return (
-    <main className="h-screen p-12 lg:max-w-4/5 lg:w-4/5 w-full max-w-full mx-auto">
+    <main className="h-screen sm:p-12 p-6 lg:max-w-4/5 lg:w-4/5 w-full max-w-full mx-auto">
       <section id="main">
         <Hero />
       </section>
