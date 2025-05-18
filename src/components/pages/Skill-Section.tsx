@@ -64,12 +64,12 @@ const SKILL_ICONS = [
     customClasses: '',
   },
   {
-    title: 'Jest',
+    title: 'jQuery',
     iconName: 'skill-icons:jquery',
     customClasses: '',
   },
   {
-    title: 'Jest',
+    title: 'Bootstrap',
     iconName: 'skill-icons:bootstrap',
     customClasses: '',
   },
