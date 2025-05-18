@@ -1,8 +1,6 @@
 import { getExperience } from '@/utils/apis'
-
 import SectionTemplate from '../templates/Section-Template'
 import { format } from 'date-fns'
-import { MdOutlineArrowRightAlt } from 'react-icons/md'
 
 const Experience = async () => {
   const experience: any[] = await getExperience()
@@ -17,7 +15,7 @@ const Experience = async () => {
           console.log(jobTitle)
           const period = (
             <div className="flex items-center gap-x-2">
-              {formattedStartDate} <MdOutlineArrowRightAlt />{' '}
+              {formattedStartDate} -{' '}
               {formattedEndDate ? formattedEndDate : 'Present'}
             </div>
           )
@@ -27,9 +25,8 @@ const Experience = async () => {
               key={`exp-${index + 1}`}
               className="gap-x-8 gap-y-4 text-gray-400 grid grid-cols-2 py-2"
             >
-              <div>
-                {!formattedEndDate ? `Since ${formattedStartDate}` : period}
-              </div>
+              {!formattedEndDate ? `Since ${formattedStartDate}` : period}
+
               <div className="flex flex-col">
                 <a
                   href={webLink}
