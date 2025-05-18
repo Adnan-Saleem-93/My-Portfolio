@@ -9,7 +9,7 @@ const Experience = async () => {
 
   return (
     <SectionTemplate sectionHeaderText="experience">
-      <div className="py-4 w-full">
+      <div className="w-full">
         {experience.map((exp, index) => {
           const { startDate, endDate, companyName, jobTitle, webLink } = exp
           const formattedStartDate = startDate ? format(startDate, 'MMM y') : ''

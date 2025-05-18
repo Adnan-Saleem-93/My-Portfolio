@@ -8,7 +8,7 @@ import Email from '../atoms/Email'
 
 const Hero = () => {
   return (
-    <GenericTemplate classes="flex flex-col item-center w-full py-4">
+    <GenericTemplate classes="flex flex-col item-center w-full pb-8">
       <div className="flex gap-x-8 items-center justify-between">
         <div className="flex gap-x-4 items-center">
           <HeroAvatar />

@@ -37,7 +37,11 @@ const SKILL_ICONS = [
   { title: 'Git', iconName: 'skill-icons:git', customClasses: '' },
   { title: 'GitHub', iconName: 'skill-icons:github-light', customClasses: '' },
   { title: 'npm', iconName: 'skill-icons:npm-dark', customClasses: '' },
-  { title: 'Sanity', iconName: 'devicon:sanity', customClasses: 'rounded-2xl' },
+  {
+    title: 'Sanity CMS',
+    iconName: 'devicon:sanity',
+    customClasses: 'rounded-2xl',
+  },
   { title: 'Vite', iconName: 'skill-icons:vite-dark', customClasses: '' },
   {
     title: 'Material UI',
@@ -48,6 +52,12 @@ const SKILL_ICONS = [
   { title: '.NET', iconName: 'skill-icons:dotnet', customClasses: '' },
   { title: 'Postman', iconName: 'skill-icons:postman', customClasses: '' },
   { title: 'Python', iconName: 'skill-icons:python-light', customClasses: '' },
+  { title: 'Prisma ORM', iconName: 'skill-icons:prisma', customClasses: '' },
+  {
+    title: 'Notion',
+    iconName: 'skill-icons:notion-light',
+    customClasses: '',
+  },
 ]
 const Skills = async () => {
   return (
