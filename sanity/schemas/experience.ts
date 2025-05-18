@@ -1,4 +1,4 @@
-import {defineType} from 'sanity'
+import { defineType } from 'sanity'
 
 export default defineType({
   name: 'experience',
@@ -8,48 +8,49 @@ export default defineType({
     {
       name: 'companyName',
       type: 'string',
-      title: 'Company Name'
+      title: 'Company Name',
     },
     {
       name: 'companyImage',
       title: 'Company Image',
       type: 'image',
       options: {
-        hotspot: false
+        hotspot: false,
       },
       fields: [
         {
           name: 'alt',
           type: 'string',
-          title: 'Company Name'
-        }
-      ]
+          title: 'Company Name',
+        },
+      ],
     },
     {
       name: 'jobTitle',
       title: 'Job Title',
-      type: 'string'
+      type: 'array',
+      of: [{ type: 'string' }],
     },
     {
       name: 'startDate',
       title: 'Start Date',
-      type: 'datetime'
+      type: 'datetime',
     },
     {
       name: 'endDate',
       title: 'End Date',
-      type: 'datetime'
+      type: 'datetime',
     },
     {
       name: 'webLink',
       title: 'Link',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'points',
       title: 'Points',
       type: 'array',
-      of: [{type: 'string'}]
-    }
-  ]
+      of: [{ type: 'string' }],
+    },
+  ],
 })

@@ -14,6 +14,7 @@ const Experience = async () => {
           const { startDate, endDate, companyName, jobTitle, webLink } = exp
           const formattedStartDate = startDate ? format(startDate, 'MMM y') : ''
           const formattedEndDate = endDate ? format(endDate, 'MMM y') : ''
+          console.log(jobTitle)
           const period = (
             <div className="flex items-center gap-x-2">
               {formattedStartDate} <MdOutlineArrowRightAlt />{' '}
@@ -37,7 +38,7 @@ const Experience = async () => {
                 >
                   {companyName}
                 </a>
-                <p className="text-sm">{jobTitle}</p>
+                <p className="text-sm">{jobTitle.join(' → ')}</p>
               </div>
             </div>
           )
