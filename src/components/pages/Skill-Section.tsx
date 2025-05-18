@@ -58,6 +58,21 @@ const SKILL_ICONS = [
     iconName: 'skill-icons:notion-light',
     customClasses: '',
   },
+  {
+    title: 'Jest',
+    iconName: 'skill-icons:jest',
+    customClasses: '',
+  },
+  {
+    title: 'Jest',
+    iconName: 'skill-icons:jquery',
+    customClasses: '',
+  },
+  {
+    title: 'Jest',
+    iconName: 'skill-icons:bootstrap',
+    customClasses: '',
+  },
 ]
 const Skills = async () => {
   return (
