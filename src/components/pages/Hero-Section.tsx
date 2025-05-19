@@ -5,6 +5,7 @@ import { IoLogoLinkedin } from 'react-icons/io5'
 import { IoLogoGithub } from 'react-icons/io5'
 import { SiUpwork } from 'react-icons/si'
 import Email from '../atoms/Email'
+import { Icon } from '@iconify/react'
 
 const Hero = () => {
   const findMeOn = () => {
@@ -41,7 +42,8 @@ const Hero = () => {
           </a>
         </div>
         <p className="text-orange-100 flex items-center gap-x-0.5">
-          ↪ <Email />
+          <Icon icon="entypo:email" className="text-sm" />
+          <Email />
         </p>
       </>
     )
