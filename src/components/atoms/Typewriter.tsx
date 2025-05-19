@@ -14,8 +14,9 @@ export default function Typewriter({}: Props) {
     words: [
       'a ReactJS Developer',
       'a NextJS Developer',
-      'an ASP.NET Developer',
+      'a Chrome Extension Developer',
       'a MERN Developer',
+      'an ASP.NET Developer',
     ],
     loop: true,
     delaySpeed: 3000,
