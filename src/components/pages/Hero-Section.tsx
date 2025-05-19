@@ -50,9 +50,9 @@ const Hero = () => {
   return (
     <GenericTemplate classes="flex flex-col item-center w-full pb-8">
       <div className="flex md:flex-row w-full flex-col gap-8 md:items-center md:justify-between">
-        <div className="flex gap-x-6 items-center w-full">
+        <div className="flex sm:flex-row flex-col gap-y-4 gap-x-6 items-center w-full">
           <HeroAvatar />
-          <div className="flex md:flex-row flex-col gap-y-2 justify-between w-full">
+          <div className="flex sm:text-left text-center md:flex-row flex-col gap-y-2 justify-between w-full">
             <div className="flex flex-col justify-center gap-y-2">
               <h1 className="text-slate-300 tracking-[6px] text-2xl">
                 Adnan Saleem
@@ -60,7 +60,7 @@ const Hero = () => {
 
               <Typewriter />
             </div>
-            <div className="flex flex-col gap-y-2 justify-evenly md:items-end">
+            <div className="flex flex-col gap-y-2 justify-evenly sm:items-start items-center md:items-end">
               {findMeOn()}
             </div>
           </div>
