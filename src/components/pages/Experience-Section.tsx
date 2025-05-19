@@ -14,7 +14,7 @@ const Experience = async () => {
           const formattedEndDate = endDate ? format(endDate, 'MMM y') : ''
 
           const period = (
-            <div className="flex items-center gap-x-2">
+            <div className="flex items-center gap-x-2 text-sm">
               {formattedStartDate} -{' '}
               {formattedEndDate ? formattedEndDate : 'Present'}
             </div>
@@ -23,19 +23,29 @@ const Experience = async () => {
           return (
             <div
               key={`exp-${index + 1}`}
-              className="gap-x-8 gap-y-4 text-gray-400 grid grid-cols-2 py-2"
+              className="gap-x-8 gap-y-4 text-gray-400 sm:grid sm:grid-cols-2 py-2"
             >
-              {!formattedEndDate ? `Since ${formattedStartDate}` : period}
+              <a
+                href={webLink}
+                target="_blank"
+                className="text-slate-100 hover:text-slate-300 cursor-pointer"
+              >
+                {companyName}
+              </a>
 
-              <div className="flex flex-col">
-                <a
-                  href={webLink}
-                  target="_blank"
-                  className="text-slate-100 hover:text-slate-300 cursor-pointer"
+              <div className="flex flex-col text-sm">
+                <p className="text-slate-300 sm:border-b sm:border-dashed border-slate-400 sm:pb-1 w-fit">
+                  {jobTitle.join(' → ')}
+                </p>
+                <div
+                  className={`pt-1 ${
+                    index === experience.length - 1
+                      ? ''
+                      : 'border-b border-dashed border-slate-400 sm:pb-0 pb-1'
+                  } sm:border-none`}
                 >
-                  {companyName}
-                </a>
-                <p className="text-sm">{jobTitle.join(' → ')}</p>
+                  {!formattedEndDate ? `Since ${formattedStartDate}` : period}
+                </div>
               </div>
             </div>
           )
