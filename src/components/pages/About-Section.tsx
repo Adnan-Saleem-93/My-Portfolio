@@ -18,10 +18,10 @@ const About = () => {
       industry experience.
     </>,
     `Passionate about using technologies like JavaScript, ReactJS, NextJS,
-          Chrome Extensions, MERN Stack, ASP.NET & SQL Server for building web
+          MERN Stack, ASP.NET & SQL Server for building web
           apps.`,
     `Well-experienced in Full-stack Web Development, capable of working on
-          both Frontend and Backend Applications, as well as Databases.`,
+          both Frontend, Backend Applications, Chrome Extensions and Databases.`,
     `Full Stack Web Developer by day, Freelancer by night.`,
   ]
 
