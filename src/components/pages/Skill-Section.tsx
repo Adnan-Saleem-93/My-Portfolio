@@ -76,8 +76,11 @@ const SKILL_ICONS = [
 ]
 const Skills = async () => {
   return (
-    <SectionTemplate sectionHeaderText="Skills">
-      <div className="flex flex-wrap gap-5 items-center">
+    <SectionTemplate
+      sectionHeaderText="Skills"
+      classes="md:items-start items-center"
+    >
+      <div className="flex flex-wrap gap-5 items-center md:justify-start justify-center">
         {SKILL_ICONS.map((skill: any) => {
           return (
             <div key={skill.iconName} title={skill.title}>
