@@ -41,7 +41,7 @@ const Form = ({
     return inputFields.map((formItem: IFormArrayItem, index: number) => {
       const { name, type, error, value, placeholder } = formItem
       const colSpan: string = ['name', 'email'].includes(name)
-        ? 'col-span-1'
+        ? 'md:col-span-1 col-span-2'
         : 'col-span-2'
       return (
         <div key={index} className={`${colSpan} relative mb-1`}>

@@ -31,7 +31,7 @@ const Contact = () => {
   }
   return (
     <SectionTemplate sectionHeaderText="Contact me">
-      <div className="md:w-[50%] w-full">
+      <div className="md:w-[75%] w-full">
         <Form
           defaultValues={contactDefaultValues}
           form={contactForm}
