@@ -3,7 +3,7 @@ import { differenceInYears } from 'date-fns'
 
 const About = () => {
   // Define the start date
-  const startDate = new Date(2019, 10, 26) // Note: JavaScript months are  0-indexed, so 10 represents Novemeber
+  const startDate = new Date(2019, 10, 26) // Note: JavaScript months are  0-indexed, so 10 represents November
 
   // Get the current date
   const currentDate = new Date()

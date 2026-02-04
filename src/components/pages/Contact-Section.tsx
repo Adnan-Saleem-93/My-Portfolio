@@ -10,6 +10,7 @@ import {
   contactValidations,
 } from '../../schemas/contact'
 import { SubmitHandler } from 'react-hook-form'
+import { toast } from 'sonner'
 
 type InputType = yup.InferType<typeof contactValidations>
 
@@ -22,11 +23,14 @@ const Contact = () => {
         data,
         '7ocdXk-QjLZPjt_A5'
       )
-      // TODO: show a success toast
-      console.log(response)
+      if(response.status === 200) {
+        toast.success("Message sent successfully!")
+      }else{
+        toast.error("Failed to send the message. Please try again later.")
+      }
     } catch (error: any) {
-      // TODO: show an error toast
       console.log(error)
+      toast.error("Failed to send the message. Please try again later.")
     }
   }
   return (

@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 const Email = () => {
   const [isCopied, setIsCopied] = useState(false)
-  const EMAIL = 'adnansaleem.dev@gmail.com'
+  const EMAIL = 'adnan.dm@proton.me'
   const copyToClipboard = () => {
     navigator.clipboard.writeText(EMAIL)
     setIsCopied(true)

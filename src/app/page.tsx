@@ -5,6 +5,7 @@ import Experience from '@/components/pages/Experience-Section'
 import Hero from '@/components/pages/Hero-Section'
 import Skills from '@/components/pages/Skill-Section'
 import { NextPage } from 'next'
+import {Toaster} from "sonner"
 
 const Home: NextPage = () => {
   return (
@@ -32,6 +33,8 @@ const Home: NextPage = () => {
       <footer id="footer">
         <Footer />
       </footer>
+
+       <Toaster />
     </main>
   )
 }
